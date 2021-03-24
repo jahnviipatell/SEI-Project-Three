@@ -1,12 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
-
+import { port, dbURI } from './config/environment.js'
+import router from './config/router.js'
 
 const app = express()
-
-const port = 4000
-
-const dbURI = 'mongodb://localhost/icelander'
 
 const startServer = async () => {
   try {
@@ -22,6 +19,9 @@ const startServer = async () => {
       console.log(`🚨 Incoming request: ${req.method} - ${req.url}`)
       next()
     })
+
+    //! Run the router
+    app.use(router)
 
     //! Server
     app.listen(port, () => console.log(`🚀 Express is up and running on port ${port}`))
