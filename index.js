@@ -21,7 +21,7 @@ const startServer = async () => {
     })
 
     //! Run the router
-    app.use(router)
+    app.use('/api', router)
 
     //! Server
     app.listen(port, () => console.log(`🚀 Express is up and running on port ${port}`))
