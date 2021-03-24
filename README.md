@@ -1,6 +1,19 @@
 # SEI-Project-Three
 Icelander
-The Hamster
 
 My group project 
 Jahnvi
+
+Kazza K
+
+
+
+
+
+
+
+
+
+
+
+The Hamster
