@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 import { dbURI } from '../config/environment.js'
+import placeData from './data/places.js'
+import Place from '../models/place.js'
 
 const seedDatabase = async () => {
   try {
@@ -10,6 +12,15 @@ const seedDatabase = async () => {
     //! Clear database
     await mongoose.connection.db.dropDatabase()
     console.log('👍 DB dropped')
+
+    //! Add places to db
+    const places = await Place.create(placeData)
+    console.log('PLACES', places)
+    console.log(`🌱 DB seeded with ${places.length} places`)
+
+    //! Close connection
+    await mongoose.connection.close()
+    console.log('👋 Bye!')
 
   } catch (err) {
     console.log(err)
