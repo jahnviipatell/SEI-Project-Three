@@ -17,7 +17,16 @@ const Home = () => {
   if (!places) return null
 
   return (
-    <h1>{places[0].name}</h1>
+    <>
+      <h1>
+        {places[0].nameOfDestination}
+        {places[0].typeOfDestination}
+        {places[0].star}
+      </h1>
+      <div>
+        <img src={places[0].image} />
+      </div>
+    </>
   )
 }
 
