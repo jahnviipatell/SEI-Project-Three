@@ -17,11 +17,11 @@ export default [
   {
     nameOfDestination: 'Blue Lagoon',
     typeOfDestination: 'Activity',
-    Longitude: -22.453665530291346,
-    Latitude: 63.88181365893593,
-    Description: 'World-renowned spa is known for its healing waters, vivid azure colours and luxurious treatments. It is located in the middle of a moss-covered lava field, giving it an otherworldly atmosphere.',
+    longitude: -22.453665530291346,
+    latitude: 63.88181365893593,
+    description: 'World-renowned spa is known for its healing waters, vivid azure colours and luxurious treatments. It is located in the middle of a moss-covered lava field, giving it an otherworldly atmosphere.',
     image: 'https://images.unsplash.com/photo-1439725434120-c1b50e0cc329?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
-    Icon: '🤿',
+    icon: '🤿',
     packageId: 1,
     winterAccess: true
   },
