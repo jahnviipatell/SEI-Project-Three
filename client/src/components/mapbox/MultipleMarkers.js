@@ -35,11 +35,13 @@ const SimpleMap = () => {
         mapStyle='mapbox://styles/mapbox/streets-v11'
         latitude={viewPort[0].latitude}
         longitude={viewPort[0].longitude}
-        zoom={10}
+        zoom={7}
       >
-        <Marker latitude={viewPort[0].latitude} longitude={viewPort[0].longitude}>
-          {viewPort[0].icon}
-        </Marker>
+        {viewPort.map(place => {
+          return <Marker key={place._id} latitude={place.latitude} longitude={place.longitude}>
+            {place.icon}
+          </Marker>
+        })}
       </ReactMapGL>
     </div>
   )

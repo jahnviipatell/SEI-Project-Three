@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema
   .virtual('passwordConfirmation') // defining name of virtual field
-  .set(function(passwordConfirmation) {
+  .set(function (passwordConfirmation) {
     this._passwordConfirmation = passwordConfirmation
   })
 
@@ -21,7 +21,7 @@ userSchema
 // * Check if password and passwordConfirmation match
 
 userSchema
-  .pre('validate', function(next) {
+  .pre('validate', function (next) {
     if (this.isModified('password') && this.password !== this._passwordConfirmation) {
       this.invalidate('passwordConfirmation', 'Passwords do not match')
     }
@@ -29,7 +29,7 @@ userSchema
   })
 
 userSchema
-  .pre('save', function(next) {
+  .pre('save', function (next) {
     if (this.isModified('password')) {
       this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync())
     }
@@ -37,7 +37,7 @@ userSchema
   })
 
 
-userSchema.methods.validatePassword = function(password) {
+userSchema.methods.validatePassword = function (password) {
   return bcrypt.compareSync(password, this.password)
 }
 
