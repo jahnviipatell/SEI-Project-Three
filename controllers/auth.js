@@ -21,10 +21,10 @@ export const registerUser = async (req, res) => {
 export const loginUser = async (req, res) => {
   try {
     const userToLogin = await User.findOne({ email: req.body.email })
-    if (!userToLogin || !userToLogin.validatePassword(req.body.password)) { //or if the passwords do not match (from auth.js)
+    if (!userToLogin || !userToLogin.validatePassword(req.body.password)) {
       throw new Error()
     }
-    //if they do match and everything is okay then..
+
     const token = jwt.sign({ sub: userToLogin._id }, secret, { expiresIn: '7 days' })
     return res.status(200).json({ message: `Welcome back ${userToLogin.username}`, token })
   } catch (err) {
