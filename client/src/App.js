@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Home'
+import SimpleMap from './components/mapbox/MultipleMarkers'
 
 const App = () => {
 
@@ -8,6 +9,7 @@ const App = () => {
     <>
       <h1>Hello</h1>
       <Home />
+      <SimpleMap />
     </>
   )
 }

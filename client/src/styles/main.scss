@@ -1,0 +1,49 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  .title {
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    transform: skewX(-10deg);
+    font-size: 2.5rem;
+  }
+}
+
+.navbar {
+  border-bottom: 1px solid lightgray;
+}
+
+.map-container {
+  height: calc(100vh - 52px);
+  width: 100%;
+}
+
+.map-controller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 220px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  margin: 1rem;
+}
+
+.buttons {
+  justify-content: space-evenly !important;
+}
+
+.marker {
+  font-size: 20px;
+}
+
+.rocket {
+  display: block;
+  transform: translateX(-20px);
+}
+
+@import '~bulma/bulma.sass';
