@@ -1,16 +1,23 @@
 import React from 'react'
 import Home from './Home'
-import SimpleMap from './components/mapbox/MultipleMarkers'
+import MultipleMarkers from './components/mapbox/MultipleMarkers'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
 
 const App = () => {
 
 
   return (
-    <>
-      <h1>Hello</h1>
-      <Home />
-      <SimpleMap />
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/map">
+          <MultipleMarkers />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReactMapGL, { Marker } from 'react-map-gl'
 
-const SimpleMap = () => {
+const MultipleMarkers = () => {
   // console.log('MY TOKEN >>', process.env.REACT_APP_MAPBOX_ACCESS_TOKEN)
 
   const [viewPort, setViewPort] = useState(null)
@@ -49,4 +49,4 @@ const SimpleMap = () => {
 }
 
 
-export default SimpleMap
+export default MultipleMarkers
