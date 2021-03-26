@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReactMapGL, { Marker } from 'react-map-gl'
+// import MiniTile from './MiniTile'
 
 const MultipleMarkers = () => {
   // console.log('MY TOKEN >>', process.env.REACT_APP_MAPBOX_ACCESS_TOKEN)
