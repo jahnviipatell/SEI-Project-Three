@@ -3,16 +3,25 @@ import axios from 'axios'
 import ReactMapGL, { Marker } from 'react-map-gl'
 
 const MultipleMarkers = () => {
-  // console.log('MY TOKEN >>', process.env.REACT_APP_MAPBOX_ACCESS_TOKEN)
 
-  const [viewPort, setViewPort] = useState(null)
-  console.log(setViewPort)
+  const [viewPort, setViewPort] = useState({
+    latitude: 64.842827,
+    longitude: -18.164241,
+    zoom: 4,
+    bearing: 0,
+    pitch: 0
+  })
+
+  
+
+  const [placeData, setPlaceData] = useState(null)
+  console.log(setPlaceData)
 
   useEffect(() => {
-    console.log(viewPort)
+    console.log(placeData)
     const getData = async () => {
       const response = await axios.get('/api/places')
-      setViewPort(response.data)
+      setPlaceData(response.data)
     }
     getData()
   }, [])
@@ -24,20 +33,21 @@ const MultipleMarkers = () => {
   //   })
   // }, [])
 
-  if (!viewPort) return null
-
+  if (!placeData) return null
   return (
     <div className="map-container">
       <ReactMapGL
+        { ...viewPort }
+        onViewportChange={(viewPort) => setViewPort(viewPort)}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
         height='100%'
         width='100%'
         mapStyle='mapbox://styles/mapbox/streets-v11'
-        latitude={viewPort[0].latitude}
-        longitude={viewPort[0].longitude}
-        zoom={7}
+        // latitude={placeData[0].latitude}
+        // longitude={placeData[0].longitude}
+        // zoom={7}
       >
-        {viewPort.map(place => {
+        {placeData.map(place => {
           return <Marker key={place._id} latitude={place.latitude} longitude={place.longitude}>
             {place.icon}
           </Marker>
