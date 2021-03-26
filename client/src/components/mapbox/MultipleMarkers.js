@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ReactMapGL, { Marker } from 'react-map-gl'
+import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 
 const MultipleMarkers = () => {
 
@@ -12,10 +12,13 @@ const MultipleMarkers = () => {
     pitch: 0
   })
 
-  
-
   const [placeData, setPlaceData] = useState(null)
   console.log(setPlaceData)
+
+  const [popup, setPopup] = useState(null)
+
+
+  
 
   useEffect(() => {
     console.log(placeData)
@@ -25,14 +28,14 @@ const MultipleMarkers = () => {
     }
     getData()
   }, [])
-
+  console.log(popup)
   // useEffect(() => {
   //   window.navigator.geolocation.getCurrentPosition(position => {
   //     const { longitude, latitude } = position.coords
   //     setViewPort({ longitude, latitude })
   //   })
   // }, [])
-
+  // if (!popup) return null
   if (!placeData) return null
   return (
     <div className="map-container">
@@ -49,9 +52,26 @@ const MultipleMarkers = () => {
       >
         {placeData.map(place => {
           return <Marker key={place._id} latitude={place.latitude} longitude={place.longitude}>
-            {place.icon}
+            <span onClick={() => setPopup(place)}>
+              {place.icon}
+            </span>
           </Marker>
         })}
+        {/* <Popup
+          latitude= {64.842827}
+          longitude= {-18.164241}
+        > */}
+        {/* </Popup> */}
+        { popup && 
+        <Popup
+          latitude={popup.latitude}
+          longitude={popup.longitude}
+          closeOnClick={true}
+          onClose={() => setPopup(null)}
+        >
+          <div>{popup.nameOfDestination}</div>
+        </Popup>
+        }
       </ReactMapGL>
     </div>
   )
