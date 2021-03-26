@@ -4,7 +4,7 @@ import MultipleMarkers from './components/mapbox/MultipleMarkers'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MyNavbar from './Navbar'
 import AllPackages from './components/AllPackages'
-import MiniTile from './components/mapbox/MiniTile'
+import Minitile from './components/mapbox/Minitile'
 
 const App = () => {
 
@@ -22,7 +22,7 @@ const App = () => {
           <AllPackages />
         </Route>
         <Route path="/minitile">
-          <MiniTile />
+          <Minitile />
         </Route>
       </Switch>
     </BrowserRouter>

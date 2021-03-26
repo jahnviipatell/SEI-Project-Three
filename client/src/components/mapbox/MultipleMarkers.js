@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+import Minitile from './Minitile'
+
 
 const MultipleMarkers = () => {
 
@@ -18,7 +20,7 @@ const MultipleMarkers = () => {
   const [popup, setPopup] = useState(null)
 
 
-  
+
 
   useEffect(() => {
     console.log(placeData)
@@ -40,15 +42,15 @@ const MultipleMarkers = () => {
   return (
     <div className="map-container">
       <ReactMapGL
-        { ...viewPort }
+        {...viewPort}
         onViewportChange={(viewPort) => setViewPort(viewPort)}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
         height='100%'
         width='100%'
         mapStyle='mapbox://styles/mapbox/streets-v11'
-        // latitude={placeData[0].latitude}
-        // longitude={placeData[0].longitude}
-        // zoom={7}
+      // latitude={placeData[0].latitude}
+      // longitude={placeData[0].longitude}
+      // zoom={7}
       >
         {placeData.map(place => {
           return <Marker key={place._id} latitude={place.latitude} longitude={place.longitude}>
@@ -62,15 +64,16 @@ const MultipleMarkers = () => {
           longitude= {-18.164241}
         > */}
         {/* </Popup> */}
-        { popup && 
-        <Popup
-          latitude={popup.latitude}
-          longitude={popup.longitude}
-          closeOnClick={true}
-          onClose={() => setPopup(null)}
-        >
-          <div>{popup.nameOfDestination}</div>
-        </Popup>
+        {popup &&
+          <Popup
+            latitude={popup.latitude}
+            longitude={popup.longitude}
+            closeOnClick={true}
+            onClose={() => setPopup(null)}
+          >
+            {/* <div>{popup.nameOfDestination}</div> */}
+            <Minitile {...popup} />
+          </Popup>
         }
       </ReactMapGL>
     </div>
