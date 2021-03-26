@@ -6,7 +6,7 @@ import React from 'react'
 const MyNavbar = () => {
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg">
       <Navbar.Brand href="#home"><img className="logo" src='/assets/logo_white_large.jpeg' /></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
