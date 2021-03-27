@@ -3,7 +3,7 @@ export default [
   {
     name: 'Complete Ring Road of Iceland',
     price: 679,
-    decription: 'This self-drive package helps you save money without sacrificing any of the experiences. You will drive around the entire Ring Road, taking you around the whole country, including the Snæfellsnes Peninsula and the famous Golden Circle.',
+    description: 'This self-drive package helps you save money without sacrificing any of the experiences. You will drive around the entire Ring Road, taking you around the whole country, including the Snæfellsnes Peninsula and the famous Golden Circle.',
     duration: 10,
     image: '/assets/stephen-leonardi-4gBCR5sPK4k-unsplash.jpg',
     reviewRating: 4.7,
@@ -14,7 +14,7 @@ export default [
   {
     name: '1 Week Complete Ring Road',
     price: 580,
-    decription: 'An 8-day adventure to Iceland. Explore the stunning attractions of Iceland’s South Coast, Eastfjords, North and West as you travel the full Ring Road.',
+    description: 'An 8-day adventure to Iceland. Explore the stunning attractions of Iceland’s South Coast, Eastfjords, North and West as you travel the full Ring Road.',
     duration: 8,
     image: '/assets/jeremy-goldberg-WKVGmz7o0O4-unsplash.jpg',
     reviewRating: 4.8,
@@ -25,7 +25,7 @@ export default [
   {
     name: 'Spectacular Northern Lights',
     price: 287,
-    decription: 'Spend a week in Iceland travelling to the best attractions of the Snæfellsnes Peninsula, the Golden Circle, and the South Coast with this 7-day tour.',
+    description: 'Spend a week in Iceland travelling to the best attractions of the Snæfellsnes Peninsula, the Golden Circle, and the South Coast with this 7-day tour.',
     duration: 7,
     image: '/assets/william-warby-QczsC7XZMT8-unsplash.jpg',
     reviewRating: 4.8,
@@ -36,7 +36,7 @@ export default [
   {
     name: 'Northern Lights South Coast',
     price: 234,
-    decription: 'Join this 6-day winter self drive tour around some of the best spots in Iceland. Explore the wonders of Iceland’s spectacular South Coast as well as the famous sites of the Golden Circle.',
+    description: 'Join this 6-day winter self drive tour around some of the best spots in Iceland. Explore the wonders of Iceland’s spectacular South Coast as well as the famous sites of the Golden Circle.',
     duration: 6,
     image: '/assets/nicolas-j-leclercq-va_nrBLonf8-unsplash.jpg',
     reviewRating: 4.7,
@@ -47,7 +47,7 @@ export default [
   {
     name: 'Northern Lights West & South Coast',
     price: 409,
-    decription: 'Get cool on this eight-day and seven-night winter adventure in Iceland. Enter Ice caves by the Jökulsárlón glacier lagoon, travel the Golden Circle, hike otherworldly glaciers, explore thundering waterfalls and immerse yourself in Reykjavík\'s vibrant city life!',
+    description: 'Get cool on this eight-day and seven-night winter adventure in Iceland. Enter Ice caves by the Jökulsárlón glacier lagoon, travel the Golden Circle, hike otherworldly glaciers, explore thundering waterfalls and immerse yourself in Reykjavík\'s vibrant city life!',
     duration: 8,
     image: '/assets/jonatan-pie-VlH2eHyE_50-unsplash.jpg',
     reviewRating: 4.8,
@@ -58,7 +58,7 @@ export default [
   {
     name: 'Jokulsarlon Glacier Lagoon',
     price: 377,
-    decription: 'This tour takes you from the world-famous Blue Lagoon, through the vibrant capital city of Reykjavik, around the wondrous Golden Circle, along the beautiful South Coast, and all the way to the incredible Jökulsárlón Glacier Lagoon.',
+    description: 'This tour takes you from the world-famous Blue Lagoon, through the vibrant capital city of Reykjavik, around the wondrous Golden Circle, along the beautiful South Coast, and all the way to the incredible Jökulsárlón Glacier Lagoon.',
     duration: 6,
     image: '/assets/maarten-van-den-heuvel-Be03gq0my8Q-unsplash.jpg',
     reviewRating: 4.8,

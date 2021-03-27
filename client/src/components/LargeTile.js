@@ -34,7 +34,7 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
             </div>
           </div>
           <div className="description-tile">
-            <p>{description}</p>
+            <p className="tile-description">{description}</p>
           </div>
         </div>
       </li >

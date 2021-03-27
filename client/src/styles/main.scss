@@ -161,23 +161,10 @@ background: rgb(194, 182, 182);
   color: white;
 }
 
-.description-tile {
-  height: 200px;
-  position: absolute;
-  // display: none;
-}
-.description-tile:hover {
-  display: inline-block;
-}
-
-.flip-card-back {
-  background-color: grey;
-  transform: rotateY(180deg);
-}
-
 .package-background {
   height: 100%;
   border-radius: 7px;
+  z-index: 1;
 }
 
 .left {
@@ -187,6 +174,7 @@ background: rgb(194, 182, 182);
   height: 80px;
   font-size: large;
   font-weight: 600;
+  z-index: 2;
 }
 
 .right {
@@ -220,6 +208,31 @@ background: rgb(194, 182, 182);
 .packages-li {
   height: 200px;
   margin: 1px;
+}
+
+.description-tile {
+  height: 200px;
+  position: absolute;
+  background-color: grey;
+  font-size: smaller;
+  text-align: center;
+  display: flex;
+  display: none;
+  z-index: 3;
+}
+
+.tile-description {
+  padding: 2px;
+  height: 100px;
+  align-self: center;
+}
+
+// .tile-description:hover {
+//   display: none;
+// }
+
+:hover{
+  display: none;
 }
 
 
