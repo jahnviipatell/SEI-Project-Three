@@ -15,10 +15,15 @@ const Home = () => {
 
   return (
     <>
-      <div className="logoHeader">
-        <img src='/assets/logo_white_large.jpeg' />
+      <div className="homepage">
+        <div className="homepage-container">
+          <img className="logo-homepage" src='/assets/logo_white_large.jpeg' />
+          <div className="homepage-buttons">
+            <Button className="button" onClick={handleClick}>EXPLORE ALL PACKAGES</Button>{' '}
+            <Button className="button" onClick={handleClick}>CREATE CUSTOM TRIP</Button>{' '}
+          </div>
+        </div>
       </div>
-      <Button variant="outline-secondary" onClick={handleClick}>Explore All Packages</Button>{' '}
     </>
   )
 }

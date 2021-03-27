@@ -7,12 +7,14 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
     // <div div className="packages-container" key={_id} >
     //   <ul className="packages-ul">
     <li className="packages-li"
-      style={
-        { backgroundImage: `url('${image}')` },
-        { backgroundSize: 'cover' },
-        { backgroudRepeat: 'no-repeat' },
-        { backgrroundPosition: 'center' }
-      } key={_id}>
+      // style={
+      //   { backgroundImage: `url('${image}')` },
+      //   { backgroundSize: 'cover' },
+      //   { backgroudRepeat: 'no-repeat' },
+      //   { backgrroundPosition: 'center' }
+      // }
+      key={_id}>
+      <img src={image} className="package-background" key={_id} />
       <div className="left">
         <div className="package-desciption">
           {description}
@@ -34,7 +36,7 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
           </ul>
         </div>
       </div>
-    </li>
+    </li >
     //   </ul>
     // </div >
   )

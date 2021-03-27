@@ -47,39 +47,99 @@
 }
 
 @import "~bootstrap/scss/bootstrap";
-
-.logo {
-  height: 30px;
+* {
+  font-family: 'Raleway', sans-serif;
 }
 
+//! PAGE CONTAINER FOR WHITE BACKGROUND
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+}
 
-body {
-  background-image: url('/assets/nicolas-j-leclercq-va_nrBLonf8-unsplash.jpg');
+//! NAVBAR
+.logo {
+  height: 40px;
+  background: transparentize($color: white, $amount: 0.7);
+}
+
+//!HOMEPAGE
+ #root {
+  background-image: url('/assets/rory-hennessey-PBrovES5uuI-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
-
-.packages-container {
-  width: 100%;
+.homepage {
   height: 100vh;
-  border: solid white 5px;
+  width: 100vw;
+  // display: flex;
+  // align-items: center;
+}
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 200px auto;
+}
+
+.logo-homepage {
+  display: flex;
+  width: 100%;
+  text-align: center; 
+  border: white solid 2px;
+  margin-top: 200px; 
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 white;
+  background: transparentize($color: white, $amount: 0.7);
+}
+
+.button {
+  height: 40px;
+  width: 45%;
+  font-size: 13px;
+  font-weight: 550;
+  border: white;
+  box-shadow: 0 0 1px 0 white;
+  background: transparentize($color: white, $amount: 0.8);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px;
+  transition: 0.2s ease-in-out;
+  justify-content: space-between;
+}
+
+.button:hover {
+background: rgb(194, 182, 182);
+}
+
+//! ALL PACKAGES
+
+.package-background {
+  height: 300px;
+  width: 300px;
 }
 
 .packages-ul {
-  height: 1000px;
-  width: 1000px;
-  border: solid white 10px;
+  width: 100%;
+  border: solid white 1px;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .packages-li {
-  height: 200px;
-  width: 200px;
-  border: solid white 20px;
+  width: 300px;
+  height: 300px;
+  border: solid white 2px;
+  margin: 20px;
+  color: white;
 }
-.package-background {
-  height: 50px;
+
+ul {
+  list-style-type: none;
 }
+
