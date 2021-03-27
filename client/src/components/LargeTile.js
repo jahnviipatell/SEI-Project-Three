@@ -1,31 +1,41 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
-import ListGroup from 'react-bootstrap/ListGroup'
-import ListGroupItem from 'react-bootstrap/ListGroupItem'
 
 
 
-const LargeTile = () => {
+
+const LargeTile = ({ _id, name, description, image, season, duration, price }) => {
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the bulk of
-          the card's content.
-        </Card.Text>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroupItem>Cras justo odio</ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
-      </ListGroup>
-      <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+    <div div className="packages-container" key={_id} >
+      <ul>
+        <li>
+          <div className="package-background">
+            {image}
+          </div>
+          <div className="left">
+            <div className="package-desciption">
+              {description}
+            </div>
+            <div className="package-title">
+              {name}
+            </div>
+            <div className="right">
+              <ul>
+                <li className="package-details">
+                  {duration}
+                </li>
+                <li className="package-details">
+                  {season}
+                </li>
+                <li className="package-details">
+                  {price}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   )
 }
 

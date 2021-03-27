@@ -4,6 +4,8 @@ import placeData from './data/places.js'
 import Place from '../models/place.js'
 import User from '../models/user.js'
 import userData from './data/users.js'
+import packageData from './data/packages.js'
+import Package from '../models/package.js'
 
 const seedDatabase = async () => {
   try {
@@ -23,6 +25,11 @@ const seedDatabase = async () => {
     const places = await Place.create(placeData)
     console.log('PLACES', places)
     console.log(`🌱 DB seeded with ${places.length} places`)
+
+    //! Add packages to db
+    const packages = await Package.create(packageData)
+    console.log('PACKAGES', packages)
+    console.log(`🌱 DB seeded with ${packages.length} packages`)
 
     //! Close connection
     await mongoose.connection.close()

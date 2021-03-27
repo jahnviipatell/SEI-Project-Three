@@ -1,5 +1,6 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
+import { getAllPackages, getOnePackage } from '../controllers/packages.js'
 import { getAllPlaces, getOnePlace } from '../controllers/places.js'
 
 
@@ -12,6 +13,12 @@ router.route('/places')
 
 router.route('/places/:id')
   .get(getOnePlace)
+
+router.route('/packages')
+  .get(getAllPackages)
+
+router.route('/packages/:id')
+  .get(getOnePackage)
 
 router.route('/register')
   .post(registerUser)
