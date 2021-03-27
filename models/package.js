@@ -7,7 +7,8 @@ const packageSchema = new mongoose.Schema({
   duration: { type: Number, required: true },
   image: { type: String, required: true },
   reviewRating: { type: Number },
-  season: { type: String }
+  season: { type: String },
+  packageNumber: { type: Number, required: true, unique: true }
 })
 
 export default mongoose.model('Package', packageSchema)

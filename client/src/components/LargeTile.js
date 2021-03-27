@@ -21,13 +21,13 @@ const LargeTile = ({ _id, image, name, season, duration, price }) => {
           <div className="right">
             <ul className="package-details-ul">
               <li className="package-details">
-                {duration}
+                Duration: {duration} days
               </li>
               <li className="package-details">
-                {season}
+                Available: {season}
               </li>
               <li className="package-details">
-                {price}
+                £{price}pp
               </li>
             </ul>
           </div>
