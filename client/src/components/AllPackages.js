@@ -20,13 +20,13 @@ const AllPackages = () => {
 
   return (
     <>
-      <ul>
-        {packages.map(trip => (
-          <li key={trip._id}>
+      <div div className="packages-container">
+        <ul className="packages-ul">
+          {packages.map(trip => (
             <LargeTile key={trip._id} {...trip} />
-          </li>
-        ))}
-      </ul>
+          ))}
+        </ul>
+      </div>
     </>
   )
 
