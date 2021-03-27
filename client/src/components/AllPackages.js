@@ -22,6 +22,8 @@ const AllPackages = () => {
     <>
       <div className="page-container">
         <div div className="packages-container">
+          <div className="navbar-block">
+          </div>
           <ul className="packages-ul">
             {packages.map(trip => (
               <LargeTile key={trip._id} {...trip} />

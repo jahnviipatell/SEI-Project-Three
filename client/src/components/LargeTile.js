@@ -1,11 +1,9 @@
 import React from 'react'
 
 
-const LargeTile = ({ _id, image, name, description, season, duration, price }) => {
+const LargeTile = ({ _id, image, name, season, duration, price }) => {
 
   return (
-    // <div div className="packages-container" key={_id} >
-    //   <ul className="packages-ul">
     <li className="packages-li"
       // style={
       //   { backgroundImage: `url('${image}')` },
@@ -14,31 +12,28 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
       //   { backgrroundPosition: 'center' }
       // }
       key={_id}>
-      <img src={image} className="package-background" key={_id} />
-      <div className="left">
-        <div className="package-desciption">
-          {description}
-        </div>
-        <div className="package-title">
-          {name}
-        </div>
-        <div className="right">
-          <ul>
-            <li className="package-details">
-              {duration}
-            </li>
-            <li className="package-details">
-              {season}
-            </li>
-            <li className="package-details">
-              {price}
-            </li>
-          </ul>
+      <div className="packages-li-container">
+        <img src={image} className="package-background" key={_id} />
+        <div className="left">
+          <div className="package-title">
+            {name}
+          </div>
+          <div className="right">
+            <ul className="package-details-ul">
+              <li className="package-details">
+                {duration}
+              </li>
+              <li className="package-details">
+                {season}
+              </li>
+              <li className="package-details">
+                {price}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </li >
-    //   </ul>
-    // </div >
   )
 }
 

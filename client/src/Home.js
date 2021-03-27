@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button'
 import { useHistory } from 'react-router-dom'
 
 
-
 const Home = () => {
 
   const history = useHistory()
