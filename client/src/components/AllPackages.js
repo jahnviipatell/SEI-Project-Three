@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import LargeTile from './LargeTile'
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+
 
 
 const AllPackages = () => {
@@ -23,6 +26,23 @@ const AllPackages = () => {
       <div className="page-container">
         <div div className="packages-container">
           <div className="navbar-block">
+          </div>
+          <div className="button-bar">
+            <div className="bootstrap-button">
+              <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
+                <Dropdown.Item href="#/packages/summer">Summer</Dropdown.Item>
+                <Dropdown.Item href="#/packages/winter">Winter</Dropdown.Item>
+                <Dropdown.Item href="#/packages">All</Dropdown.Item>
+              </DropdownButton>
+            </div>
+            <div className="bootstrap-button">
+              <DropdownButton id="dropdown-basic-button" variant="light" title="Duration">{' '}
+                <Dropdown.Item href="#/packages/summer">7 Days</Dropdown.Item>
+                <Dropdown.Item href="#/packages/winter">8 Days</Dropdown.Item>
+                <Dropdown.Item href="#/packages/winter">10 Days</Dropdown.Item>
+                <Dropdown.Item href="#/packages">All</Dropdown.Item>
+              </DropdownButton>
+            </div>
           </div>
           <ul className="packages-ul">
             {packages.map(trip => (

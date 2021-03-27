@@ -69,7 +69,7 @@ export default [
   {
     name: 'Reykjavik & The Blue Lagoon',
     price: 263,
-    decription: 'On your trip, you\'ll visit some incredible places, including the Blue Lagoon, Golden Circle, Reynisfjara black sand beach, Jökulsárlón glacier lagoon and many of Iceland\'s most famous waterfalls.',
+    description: 'On your trip, you\'ll visit some incredible places, including the Blue Lagoon, Golden Circle, Reynisfjara black sand beach, Jökulsárlón glacier lagoon and many of Iceland\'s most famous waterfalls.',
     duration: 5,
     image: '/assets/tucker-monticelli-xzKBI5_ZlWs-unsplash.jpg',
     reviewRating: 4.7,

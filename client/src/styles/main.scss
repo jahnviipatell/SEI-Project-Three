@@ -127,6 +127,18 @@ background: rgb(194, 182, 182);
   width: 100vw;
   background-color: rgb(73, 73, 73);
 }
+.button-bar {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bootstrap-button {
+  width: 30px;
+  margin: 10px;
+}
+
 
 .packages-container {
   width: 100vw;
@@ -147,6 +159,20 @@ background: rgb(194, 182, 182);
   display: flex;  
   text-align: center;
   color: white;
+}
+
+.description-tile {
+  height: 200px;
+  position: absolute;
+  // display: none;
+}
+.description-tile:hover {
+  display: inline-block;
+}
+
+.flip-card-back {
+  background-color: grey;
+  transform: rotateY(180deg);
 }
 
 .package-background {
