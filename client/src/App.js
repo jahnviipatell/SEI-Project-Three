@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <MyNavbar />
+          <MyNavbar className="nav-home" />
           <Home />
         </Route>
         <Route path="/map">

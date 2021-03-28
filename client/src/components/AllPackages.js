@@ -24,15 +24,18 @@ const AllPackages = () => {
 
   return (
     <>
-      <Navbar className="nav-black" />
+      <Navbar className="nav-grey" />
       <div className="page-container">
         <div div className="packages-container">
+          <div className="video-container">
+            <video src={ } autoplay="true" />
+          </div>
           <div className="button-bar">
             <div className="bootstrap-button">
               <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
-                <Dropdown.Item href="#/packages/summer">Summer</Dropdown.Item>
-                <Dropdown.Item href="#/packages/winter">Winter</Dropdown.Item>
-                <Dropdown.Item href="#/packages">All</Dropdown.Item>
+                <Dropdown.Item href="/packages/summer">Summer</Dropdown.Item>
+                <Dropdown.Item href="/packages/winter">Winter</Dropdown.Item>
+                <Dropdown.Item href="/packages">All</Dropdown.Item>
               </DropdownButton>
             </div>
             <div className="bootstrap-button">

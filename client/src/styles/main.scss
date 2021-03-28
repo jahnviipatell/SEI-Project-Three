@@ -12,10 +12,6 @@
   }
 }
 
-.navbar {
-  // border-bottom: 1px solid lightgray;
-}
-
 .map-container {
   height: calc(100vh - 52px);
   width: 100%;
@@ -55,8 +51,8 @@
 .page-container {
   min-width: 100vw;
   height: 100vh;
-  background-color: black;
-  margin-top: -70px;
+  background-color: white;
+  // margin-top: -70px;
   display: flex;
 }
 
@@ -72,17 +68,25 @@ ul {
 
 //!HOMEPAGE
  #root {
+  height: 100vh;
+  z-index: 1;
+}
+
+.bring-to-front {
+  z-index: 6;
+}
+
+.homepage {
+  position: absolute;
+  height: 101vh;
+  width: 100vw;
   background-image: url('/assets/rory-hennessey-PBrovES5uuI-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  margin-top: -70px;
+  z-index: 2;
 }
-.homepage {
-  height: 100vh;
-  width: 100vw;
-  // display: flex;
-  // align-items: center;
-}
+
 .homepage-container {
   display: flex;
   flex-direction: column;
@@ -98,7 +102,7 @@ ul {
   margin-top: 200px; 
   margin: 0 auto;
   box-shadow: 0 0 10px 0 white;
-  background: transparentize($color: white, $amount: 0.7);
+  background: transparentize($color: grey, $amount: 0.8);
 }
 
 .button {
@@ -121,9 +125,14 @@ background: rgb(194, 182, 182);
 }
 
 //! ALL PACKAGES
-.nav-black {
-  background-color: black;
-  display: inline-block;
+// .nav-grey {
+//   background-color: grey;
+//   display: inline-block;
+// }
+
+.page-container {
+  background: #E7E7E7;
+  margin-top: -70px;
 }
 
 .button-bar {
@@ -145,14 +154,12 @@ background: rgb(194, 182, 182);
 
 .packages-ul {
   width: 100vw;
-  margin-top: 15px;
-  margin-left: 0;
-  padding-left: 0;
-  margin-left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: black;
+  // border: white solid 1px;
+  // background: transparentize($color: black, $amount: 0.5);
+  box-shadow: 0 0 5px 0 white;
 }
 
 .packages-li-container {
@@ -162,6 +169,7 @@ background: rgb(194, 182, 182);
   text-align: center;
   color: white;
   box-shadow: 0 0 4px 0 white;
+  border: solid white 1px;
   margin: 5px;
 }
 
@@ -240,7 +248,7 @@ background: rgb(194, 182, 182);
 }
 
 .hover-area:hover {
-  background-color: grey;
+  background-color: black;
   color: white;
   transition: 300ms ease-out;
   cursor: pointer;
