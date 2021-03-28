@@ -135,13 +135,14 @@ background: rgb(194, 182, 182);
 
 .page-container {
   background: #E7E7E7;
+  // background: black;
   margin-top: -70px;
 }
 
 #carousel-container {
   margin-top: 70px;
-  height: 400px;
-  overflow: hidden;
+  height: 300px;
+  // overflow: hidden;
 }
 
 #carousel-image {
@@ -193,7 +194,7 @@ background: rgb(194, 182, 182);
   color: white;
   box-shadow: 0 0 4px 0 white;
   border: solid white 1px;
-  margin: 15px;
+  // margin: 15px;
 }
 
 .package-background {

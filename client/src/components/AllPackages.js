@@ -78,9 +78,9 @@ const AllPackages = () => {
                 </DropdownButton>
               </div>
             </div>
-            <div>
-              <p>NEWEST PACKAGES</p>
-            </div>
+            {/* <div> */}
+            {/* <p>NEWEST PACKAGES</p> */}
+            {/* </div> */}
           </div>
           <ul className="packages-ul">
             {packages.map(trip => (
