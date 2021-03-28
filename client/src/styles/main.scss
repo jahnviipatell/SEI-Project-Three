@@ -141,7 +141,7 @@ background: rgb(194, 182, 182);
 
 #carousel-container {
   margin-top: 70px;
-  height: 300px;
+  height: 400px;
   // overflow: hidden;
 }
 
@@ -175,15 +175,14 @@ background: rgb(194, 182, 182);
 }
 
 .packages-ul {
-  width: 100vw;
+  width: 103vw;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  // border: white solid 1px;
-  // background: transparentize($color: black, $amount: 0.5);
+  justify-content: flex-start;
+  overflow-y: hidden;
+  overflow-x: scroll;
   box-shadow: 0 0 5px 0 white;
   background: #E7E7E7;
-  padding-left: 0;
+  margin-left: -40px;
 }
 
 .packages-li-container {
@@ -192,9 +191,8 @@ background: rgb(194, 182, 182);
   display: flex;  
   text-align: center;
   color: white;
-  box-shadow: 0 0 4px 0 white;
-  border: solid white 1px;
-  // margin: 15px;
+  box-shadow: 0 0 10px 0 white;
+  border: solid white 3px;
 }
 
 .package-background {
@@ -243,8 +241,8 @@ background: rgb(194, 182, 182);
 }
 
 .packages-li {
-  height: 210px;
-  margin: 1px;
+  height: 200px;
+  // margin: 1px;
 }
 
 .description-tile {
@@ -265,17 +263,20 @@ background: rgb(194, 182, 182);
 }
 
 .hover-area {
-  height: 200px;
+  height: 197px;
   z-index: 4;
   background-color: transparent;
   color: transparent;
+  margin-top: -10px;
 }
 
 .hover-area:hover {
   background-color: black;
+  border: white solid 2px;
   color: white;
   transition: 300ms ease-out;
   cursor: pointer;
+  border-top: solid white 5px;
 }
 
 
