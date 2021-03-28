@@ -20,6 +20,9 @@ const App = () => {
         <Route path="/packages">
           <AllPackages />
         </Route>
+        <Route path="/packages/:id">
+
+        </Route>
       </Switch>
     </BrowserRouter>
 

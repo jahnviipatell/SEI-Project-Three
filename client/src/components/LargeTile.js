@@ -1,28 +1,21 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
 import { useHistory } from 'react-router-dom'
 
 
 const LargeTile = ({ _id, image, name, description, season, duration, price }) => {
 
+
   const history = useHistory()
 
   const handleClick = (event) => {
     console.log(event)
-    history.push('api/packages:id')
+    history.push('/packages/:id')
   }
+
 
   return (
     <>
-      <li className="packages-li"
-        // style={
-        //   { backgroundImage: `url('${image}')` },
-        //   { backgroundSize: 'cover' },
-        //   { backgroudRepeat: 'no-repeat' },
-        //   { backgrroundPosition: 'center' }
-        // }
-        key={_id}>
-        {/* <div className="package-flip"> */}
+      <li className="packages-li" key={_id}>
         <div className="packages-li-container">
           <img src={image} className="package-background" key={_id} />
           <div className="left">
@@ -44,11 +37,16 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
             </div>
           </div>
           <div className="description-tile">
-            <p className="tile-description">{description}</p>
-            <Button className="button" id="more-details" onClick={handleClick}>More Details</Button>{' '}
+            <div className="hover-area" onClick={handleClick}>
+              <p className="tile-description">
+                {description}
+                <br />
+                <br />
+                Click for more details...
+              </p>
+            </div>
           </div>
         </div>
-        {/* </div> */}
       </li >
     </>
   )

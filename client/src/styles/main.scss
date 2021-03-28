@@ -170,6 +170,7 @@ background: rgb(194, 182, 182);
   border-radius: 1px;
   min-width: 180px;
   max-width: 300px;
+  z-index: 2;
 }
 
 .left {
@@ -179,6 +180,7 @@ background: rgb(194, 182, 182);
   height: 80px;
   font-size: large;
   font-weight: 600;
+  z-index: 3;
 }
 
 .right {
@@ -216,33 +218,36 @@ background: rgb(194, 182, 182);
 .description-tile {
   height: 200px;
   position: absolute;
-  // background-color: transparent;
-  // color: transparent;
   font-size: smaller;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 
 .tile-description {
   padding: 2px;
   height: 100px;
+  margin-top: 20px;
 }
 
-#more-details {
-  width: 120px;
-  display: none;
+.hover-area {
+  height: 200px;
+  z-index: 4;
+  background-color: transparent;
+  color: transparent;
 }
 
-.description-tile:hover {
+.hover-area:hover {
   background-color: grey;
   color: white;
   transition: 300ms ease-out;
-  display: inline block;
+  cursor: pointer;
 }
+
+
+
 
 
 
