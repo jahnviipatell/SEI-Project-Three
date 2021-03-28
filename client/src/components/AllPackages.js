@@ -25,6 +25,12 @@ const AllPackages = () => {
 
   return (
     <>
+      <div className="packages-shadow">
+
+      </div>
+      <div className="caption">
+        <p>Explore Iceland</p>
+      </div>
       <Navbar className="nav-grey" />
       <div className="page-container">
         <div div className="packages-container">
@@ -75,9 +81,6 @@ const AllPackages = () => {
                   </DropdownButton>
                 </div>
               </div>
-              {/* <div> */}
-              {/* <p>NEWEST PACKAGES</p> */}
-              {/* </div> */}
             </div>
             <ul className="packages-ul">
               {packages.map(trip => (

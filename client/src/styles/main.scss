@@ -70,10 +70,10 @@ ul {
 }
 
 //!HOMEPAGE
- #root {
-  height: 100vh;
-  z-index: 1;
-}
+//  #root {
+//   height: 100vh;
+//   z-index: 1;
+// }
 
 .bring-to-front {
   z-index: 6;
@@ -94,7 +94,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 200px auto;
+  margin: 35vh auto;
 }
 
 .logo-homepage {
@@ -102,7 +102,7 @@ ul {
   width: 100%;
   text-align: center; 
   border: white solid 2px;
-  margin-top: 200px; 
+  // margin-top: 200px; 
   margin: 0 auto;
   box-shadow: 0 0 10px 0 white;
   background: transparentize($color: grey, $amount: 0.8);
@@ -128,10 +128,29 @@ background: rgb(194, 182, 182);
 }
 
 //! ALL PACKAGES
+.packages-shadow {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 2;
+  background: transparentize($color: grey, $amount: 0.7);
+}
 .page-container {
   background: #E7E7E7;
   margin-top: -63px;
   display: flex;
+  z-index: 1;
+}
+
+.caption {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  margin-top: 60vh;
+  z-index: 6;
+  font-size: 50px;
+  font-weight: 900;
+  color: white;
 }
 
 #carousel-container {
@@ -140,6 +159,7 @@ background: rgb(194, 182, 182);
 
 #carousel-image {
   height: 103vh;
+  z-index: 1;
 }
 
 .button-bar {
@@ -155,13 +175,6 @@ background: rgb(194, 182, 182);
   margin: 10px;
 }
 
-.drop-downs {
-  width: 400px;
-  display: flex;
-  justify-content: space-evenly;
-  margin-left: 0;
-}
-
 .packages-container {
   width: 100vw;
   display: flex;
@@ -172,8 +185,21 @@ background: rgb(194, 182, 182);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  // align-content: flex-start;
   height: 280px;
 }
+
+.bootstrap-button {
+  width: 100px;
+}
+
+.drop-downs {
+  width: 260px;
+  display: flex;
+  justify-content: space-evenly;
+  // align-self: flex-start;
+}
+
 .packages-ul {
   width: 100vw;
   display: flex;
@@ -193,6 +219,7 @@ background: rgb(194, 182, 182);
   color: white;
   box-shadow: 0 0 10px 0 white;
   border: solid white 3px;
+  margin-right: 5px;
 }
 
 .package-background {
@@ -258,7 +285,7 @@ background: rgb(194, 182, 182);
 .tile-description {
   padding: 2px;
   height: 100px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .hover-area {
