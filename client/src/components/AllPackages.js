@@ -56,33 +56,35 @@ const AllPackages = () => {
               </Carousel.Item>
             </Carousel>
           </div>
-          <div className="button-bar">
-            <div className="drop-downs">
-              <div className="bootstrap-button">
-                <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
-                  <Dropdown.Item href="/packages/summer">Summer</Dropdown.Item>
-                  <Dropdown.Item href="/packages/winter">Winter</Dropdown.Item>
-                  <Dropdown.Item href="/packages">All</Dropdown.Item>
-                </DropdownButton>
+          <div className="scroll-filter">
+            <div className="button-bar">
+              <div className="drop-downs">
+                <div className="bootstrap-button">
+                  <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
+                    <Dropdown.Item href="/packages/summer">Summer</Dropdown.Item>
+                    <Dropdown.Item href="/packages/winter">Winter</Dropdown.Item>
+                    <Dropdown.Item href="/packages">All</Dropdown.Item>
+                  </DropdownButton>
+                </div>
+                <div className="bootstrap-button">
+                  <DropdownButton id="dropdown-basic-button" variant="light" title="Duration">{' '}
+                    <Dropdown.Item href="#/packages/summer">7 Days</Dropdown.Item>
+                    <Dropdown.Item href="#/packages/winter">8 Days</Dropdown.Item>
+                    <Dropdown.Item href="#/packages/winter">10 Days</Dropdown.Item>
+                    <Dropdown.Item href="#/packages">All</Dropdown.Item>
+                  </DropdownButton>
+                </div>
               </div>
-              <div className="bootstrap-button">
-                <DropdownButton id="dropdown-basic-button" variant="light" title="Duration">{' '}
-                  <Dropdown.Item href="#/packages/summer">7 Days</Dropdown.Item>
-                  <Dropdown.Item href="#/packages/winter">8 Days</Dropdown.Item>
-                  <Dropdown.Item href="#/packages/winter">10 Days</Dropdown.Item>
-                  <Dropdown.Item href="#/packages">All</Dropdown.Item>
-                </DropdownButton>
-              </div>
+              {/* <div> */}
+              {/* <p>NEWEST PACKAGES</p> */}
+              {/* </div> */}
             </div>
-            {/* <div> */}
-            {/* <p>NEWEST PACKAGES</p> */}
-            {/* </div> */}
+            <ul className="packages-ul">
+              {packages.map(trip => (
+                <LargeTile key={trip._id} {...trip} />
+              ))}
+            </ul>
           </div>
-          <ul className="packages-ul">
-            {packages.map(trip => (
-              <LargeTile key={trip._id} {...trip} />
-            ))}
-          </ul>
         </div>
       </div>
     </>

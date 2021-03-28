@@ -128,28 +128,17 @@ background: rgb(194, 182, 182);
 }
 
 //! ALL PACKAGES
-// .nav-grey {
-//   background-color: grey;
-//   display: inline-block;
-// }
-
 .page-container {
   background: #E7E7E7;
-  // background: black;
-  margin-top: -70px;
-  border: solid orange 3px;
+  // background: transparent;
+  margin-top: -63px;
+  // margin-top: -100px;
   display: flex;
+  overflow: hidden;
 }
 
 #carousel-container {
-  margin-top: 70px;
-  height: 400px;
-  // overflow: hidden;
-}
-
-#carousel-image {
-  position: relative;
-  // top: -150px;
+  height: 66vh;
 }
 
 .button-bar {
@@ -174,19 +163,25 @@ background: rgb(194, 182, 182);
 
 .packages-container {
   width: 100vw;
-  align-self: flex-start;
-}
-
-.packages-ul {
-  width: 103vw;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.scroll-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 280px;
+}
+.packages-ul {
+  width: 100vw;
+  display: flex;
+  align-content: flex-end;
   overflow-y: hidden;
   overflow-x: scroll;
   box-shadow: 0 0 5px 0 white;
   background: #E7E7E7;
-  margin-left: -40px;
-  align-self: flex-end;
+  padding-left: 0;
 }
 
 .packages-li-container {
@@ -246,7 +241,6 @@ background: rgb(194, 182, 182);
 
 .packages-li {
   height: 200px;
-  // margin: 1px;
 }
 
 .description-tile {
