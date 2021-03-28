@@ -9,9 +9,9 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <MyNavbar />
       <Switch>
         <Route exact path="/">
+          <MyNavbar />
           <Home />
         </Route>
         <Route path="/map">

@@ -3,6 +3,7 @@ import axios from 'axios'
 import LargeTile from './LargeTile'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+import Navbar from '../Navbar'
 
 
 
@@ -23,10 +24,9 @@ const AllPackages = () => {
 
   return (
     <>
+      <Navbar className="nav-black" />
       <div className="page-container">
         <div div className="packages-container">
-          <div className="navbar-block">
-          </div>
           <div className="button-bar">
             <div className="bootstrap-button">
               <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
