@@ -137,6 +137,8 @@ background: rgb(194, 182, 182);
   background: #E7E7E7;
   // background: black;
   margin-top: -70px;
+  border: solid orange 3px;
+  display: flex;
 }
 
 #carousel-container {
@@ -147,7 +149,7 @@ background: rgb(194, 182, 182);
 
 #carousel-image {
   position: relative;
-  top: -150px;
+  // top: -150px;
 }
 
 .button-bar {
@@ -172,6 +174,7 @@ background: rgb(194, 182, 182);
 
 .packages-container {
   width: 100vw;
+  align-self: flex-start;
 }
 
 .packages-ul {
@@ -183,6 +186,7 @@ background: rgb(194, 182, 182);
   box-shadow: 0 0 5px 0 white;
   background: #E7E7E7;
   margin-left: -40px;
+  align-self: flex-end;
 }
 
 .packages-li-container {
