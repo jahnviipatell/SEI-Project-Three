@@ -1,7 +1,16 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
+import { useHistory } from 'react-router-dom'
 
 
 const LargeTile = ({ _id, image, name, description, season, duration, price }) => {
+
+  const history = useHistory()
+
+  const handleClick = (event) => {
+    console.log(event)
+    history.push('api/packages:id')
+  }
 
   return (
     <>
@@ -36,6 +45,7 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
           </div>
           <div className="description-tile">
             <p className="tile-description">{description}</p>
+            <Button className="button" id="more-details" onClick={handleClick}>More Details</Button>{' '}
           </div>
         </div>
         {/* </div> */}

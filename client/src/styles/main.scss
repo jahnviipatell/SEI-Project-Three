@@ -53,7 +53,7 @@
 
 //! PAGE CONTAINER FOR WHITE BACKGROUND
 .page-container {
-  width: 170vw;
+  min-width: 100vw;
   height: 100vh;
   background-color: black;
   margin-top: -70px;
@@ -145,12 +145,14 @@ background: rgb(194, 182, 182);
 
 .packages-ul {
   width: 100vw;
-  margin: 0;
-  // height: 90%;
+  margin-top: 15px;
+  margin-left: 0;
+  padding-left: 0;
+  margin-left: 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 3px;
   justify-content: center;
+  background-color: black;
 }
 
 .packages-li-container {
@@ -159,6 +161,8 @@ background: rgb(194, 182, 182);
   display: flex;  
   text-align: center;
   color: white;
+  box-shadow: 0 0 4px 0 white;
+  margin: 5px;
 }
 
 .package-background {
@@ -205,30 +209,41 @@ background: rgb(194, 182, 182);
 }
 
 .packages-li {
-  height: 200px;
+  height: 210px;
   margin: 1px;
 }
 
 .description-tile {
   height: 200px;
   position: absolute;
-  background-color: transparent;
-  color: transparent;
+  // background-color: transparent;
+  // color: transparent;
   font-size: smaller;
   text-align: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 .tile-description {
   padding: 2px;
   height: 100px;
-  align-self: center;
 }
 
-.description-tile:hover{
+#more-details {
+  width: 120px;
+  display: none;
+}
+
+.description-tile:hover {
   background-color: grey;
   color: white;
+  transition: 300ms ease-out;
+  display: inline block;
 }
+
 
 
 
