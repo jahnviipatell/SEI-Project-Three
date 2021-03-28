@@ -130,15 +130,16 @@ background: rgb(194, 182, 182);
 //! ALL PACKAGES
 .page-container {
   background: #E7E7E7;
-  // background: transparent;
   margin-top: -63px;
-  // margin-top: -100px;
   display: flex;
-  overflow: hidden;
 }
 
 #carousel-container {
   height: 66vh;
+}
+
+#carousel-image {
+  height: 103vh;
 }
 
 .button-bar {
