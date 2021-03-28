@@ -4,6 +4,7 @@ import LargeTile from './LargeTile'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Navbar from '../Navbar'
+import Carousel from 'react-bootstrap/Carousel'
 
 
 
@@ -27,24 +28,58 @@ const AllPackages = () => {
       <Navbar className="nav-grey" />
       <div className="page-container">
         <div div className="packages-container">
-          <div className="video-container">
-            <video src={ } autoplay="true" />
+          <div>
+            <Carousel id="carousel-container">
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  id="carousel-image"
+                  src="/assets/jeremy-bishop-h7bQ8VEZtws-unsplash.jpg"
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  id="carousel-image"
+                  src="/assets/jon-flobrant-tSsb28hzZSI-unsplash.jpg"
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  id="carousel-image"
+                  src="/assets/daniel-schoibl-oRNruBJQqfo-unsplash.jpg"
+                  alt="Third slide"
+                />
+                {/* <Carousel.Caption>
+                  <h3>Third slide label</h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption> */}
+              </Carousel.Item>
+            </Carousel>
           </div>
           <div className="button-bar">
-            <div className="bootstrap-button">
-              <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
-                <Dropdown.Item href="/packages/summer">Summer</Dropdown.Item>
-                <Dropdown.Item href="/packages/winter">Winter</Dropdown.Item>
-                <Dropdown.Item href="/packages">All</Dropdown.Item>
-              </DropdownButton>
+            <div className="drop-downs">
+              <div className="bootstrap-button">
+                <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
+                  <Dropdown.Item href="/packages/summer">Summer</Dropdown.Item>
+                  <Dropdown.Item href="/packages/winter">Winter</Dropdown.Item>
+                  <Dropdown.Item href="/packages">All</Dropdown.Item>
+                </DropdownButton>
+              </div>
+              <div className="bootstrap-button">
+                <DropdownButton id="dropdown-basic-button" variant="light" title="Duration">{' '}
+                  <Dropdown.Item href="#/packages/summer">7 Days</Dropdown.Item>
+                  <Dropdown.Item href="#/packages/winter">8 Days</Dropdown.Item>
+                  <Dropdown.Item href="#/packages/winter">10 Days</Dropdown.Item>
+                  <Dropdown.Item href="#/packages">All</Dropdown.Item>
+                </DropdownButton>
+              </div>
             </div>
-            <div className="bootstrap-button">
-              <DropdownButton id="dropdown-basic-button" variant="light" title="Duration">{' '}
-                <Dropdown.Item href="#/packages/summer">7 Days</Dropdown.Item>
-                <Dropdown.Item href="#/packages/winter">8 Days</Dropdown.Item>
-                <Dropdown.Item href="#/packages/winter">10 Days</Dropdown.Item>
-                <Dropdown.Item href="#/packages">All</Dropdown.Item>
-              </DropdownButton>
+            <div>
+              <p>NEWEST PACKAGES</p>
             </div>
           </div>
           <ul className="packages-ul">

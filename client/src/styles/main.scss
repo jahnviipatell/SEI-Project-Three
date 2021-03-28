@@ -44,7 +44,10 @@
 
 @import "~bootstrap/scss/bootstrap";
 * {
-  font-family: 'Raleway', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Playfair Display', serif;
+  // font-family: 'Lora', serif;
 }
 
 //! PAGE CONTAINER FOR WHITE BACKGROUND
@@ -135,17 +138,35 @@ background: rgb(194, 182, 182);
   margin-top: -70px;
 }
 
+#carousel-container {
+  margin-top: 70px;
+  height: 400px;
+  overflow: hidden;
+}
+
+#carousel-image {
+  position: relative;
+  top: -150px;
+}
+
 .button-bar {
-  margin-top: 65px;
-  width: 300px;
+  margin-bottom: 10px;
+  width: 100vw;
   height: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .bootstrap-button {
   width: 30px;
   margin: 10px;
+}
+
+.drop-downs {
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 0;
 }
 
 .packages-container {
@@ -160,6 +181,8 @@ background: rgb(194, 182, 182);
   // border: white solid 1px;
   // background: transparentize($color: black, $amount: 0.5);
   box-shadow: 0 0 5px 0 white;
+  background: #E7E7E7;
+  padding-left: 0;
 }
 
 .packages-li-container {
@@ -170,7 +193,7 @@ background: rgb(194, 182, 182);
   color: white;
   box-shadow: 0 0 4px 0 white;
   border: solid white 1px;
-  margin: 5px;
+  margin: 15px;
 }
 
 .package-background {
