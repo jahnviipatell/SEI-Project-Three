@@ -164,7 +164,7 @@ background: rgb(194, 182, 182);
 .package-background {
   height: 100%;
   border-radius: 7px;
-  z-index: 1;
+  min-width: 180px;
 }
 
 .left {
@@ -174,14 +174,12 @@ background: rgb(194, 182, 182);
   height: 80px;
   font-size: large;
   font-weight: 600;
-  z-index: 2;
 }
 
 .right {
   position: absolute;
   font-weight: 500;
   font-size: smaller;
-  // color: black;
 }
 
 .package-details-ul {
@@ -213,12 +211,11 @@ background: rgb(194, 182, 182);
 .description-tile {
   height: 200px;
   position: absolute;
-  background-color: grey;
+  background-color: transparent;
+  color: transparent;
   font-size: smaller;
   text-align: center;
   display: flex;
-  display: none;
-  z-index: 3;
 }
 
 .tile-description {
@@ -227,12 +224,9 @@ background: rgb(194, 182, 182);
   align-self: center;
 }
 
-// .tile-description:hover {
-//   display: none;
-// }
-
-:hover{
-  display: none;
+.description-tile:hover{
+  background-color: grey;
+  color: white;
 }
 
 
