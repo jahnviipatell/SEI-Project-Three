@@ -3,12 +3,16 @@ import axios from 'axios'
 import LargeTile from './LargeTile'
 import Navbar from '../Navbar'
 import Carousel from 'react-bootstrap/Carousel'
+// import ShowPage from './ShowPage'
+import { Link } from 'react-router-dom'
 
 
 
 const AllPackages = () => {
 
-  const [packages, setPackages] = useState(null)
+  // console.log(ShowPage)
+
+  const [packages, setPackages] = useState([])
   // console.log(setPackageData)
 
   //! UNCOMMENT BELOW
@@ -28,7 +32,7 @@ const AllPackages = () => {
     getData()
   }, [])
 
-  if (!packages) return null
+  if (packages.length < 1) return null
 
   return (
     <>
@@ -84,12 +88,14 @@ const AllPackages = () => {
                 </DropdownButton>
               </div> */}
             </div>
+            <ul className="packages-ul">
+              {packages.map(trip => (
+                <Link to={`/packages/${trip._id}`} key={trip._id}>
+                  <LargeTile  {...trip} />
+                </Link>
+              ))}
+            </ul>
           </div>
-          <ul className="packages-ul">
-            {packages.map(trip => (
-              <LargeTile key={trip._id} {...trip} />
-            ))}
-          </ul>
         </div>
       </div>
     </>
