@@ -55,7 +55,6 @@
   min-width: 100vw;
   height: 100vh;
   background-color: white;
-  // margin-top: -70px;
   display: flex;
 }
 
@@ -74,11 +73,6 @@ ul {
 }
 
 //!HOMEPAGE
-//  #root {
-//   height: 100vh;
-//   z-index: 1;
-// }
-
 .bring-to-front {
   z-index: 6;
 }
@@ -106,7 +100,7 @@ ul {
   width: 100%;
   text-align: center; 
   border: white solid 2px;
-  // margin-top: 200px; 
+  margin-top: 200px; 
   margin: 0 auto;
   box-shadow: 0 0 10px 0 white;
   background: transparentize($color: grey, $amount: 0.8);
@@ -139,39 +133,38 @@ background: rgb(194, 182, 182);
   z-index: 2;
   background: transparentize($color: grey, $amount: 0.8);
 }
-.page-container {
-  background: #E7E7E7;
-  margin-top: -63px;
-  display: flex;
-  z-index: 1;
-}
 
 .caption {
   position: absolute;
   width: 40vw;
   text-align: center;
-  margin-top: 60vh;
+  margin-top: 20vh;
   z-index: 6;
   font-size: 50px;
   font-weight: 900;
   color: white;
 }
 
+.carousel-indicators {
+  display: none;
+}
+
 #carousel-container {
-  height: 66vh;
+  height: 100vh;
+  margin-top: -70px;
+  overflow: hidden;
 }
 
 #carousel-image {
   height: 103vh;
-  z-index: 1;
+  z-index: 2;
 }
 
 .button-bar {
-  margin-bottom: 10px;
-  width: 100vw;
+  width: 30vw;
   height: 50px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .bootstrap-button {
@@ -186,12 +179,11 @@ background: rgb(194, 182, 182);
   justify-content: flex-end;
 }
 .scroll-filter {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  // align-content: flex-start;
-  // height: 280px;
-  height: 550px;
+  height: 500px;
 }
 
 .bootstrap-button {
@@ -202,32 +194,27 @@ background: rgb(194, 182, 182);
   width: 260px;
   display: flex;
   justify-content: space-evenly;
-  // align-self: flex-start;
 }
 
 .packages-ul {
-  width: 100vw;
-  // height: 400px;
+  width: 88vw;
   display: flex;
   align-content: flex-end;
   overflow-y: hidden;
   overflow-x: scroll;
-  box-shadow: 0 0 5px 0 white;
-  background: #E7E7E7;
+  box-shadow: 0 0 1px 0 white;
   padding-left: 0;
-  margin-left: 37vw;
+  margin-left: 12vw;
 }
 
 .packages-li-container {
   position: relative;
-  // height: 200px;
   display: flex;  
   flex-direction: column;
   text-align: center;
   color: white;
-  box-shadow: 0 0 10px 0 white;
-  border: solid white 3px;
-  margin-right: 5px;
+  box-shadow: 0 0 4px 0 white;
+  margin-right: 20px;
 }
 
 .package-background {
@@ -240,64 +227,49 @@ background: rgb(194, 182, 182);
 
 .left {
   width: 100%;
-  // position: absolute;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   padding: 5px;
   height: 80px;
   font-size: large;
   font-weight: 600;
   z-index: 3;
-  background-color: grey;
+  background: transparentize($color: grey, $amount: 0.3);
+
 }
 
 .right {
-  // position: absolute;
-  // display: flex;
-  // align-content: flex-end;
   font-weight: 500;
   font-size: smaller;
 }
 
 .package-details-ul {
   display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
   padding-left: 0;
 }
 
 .package-details {
   margin-top: 10px;
-  // align-self: flex-start;
   padding: 5px;
   text-align: center;
   font-size: small;
   width: 33%;
-  // display: flex
-  // justify-content: space-between;
-  // box-shadow: 0 0 1px 0 white;
-  // background: transparentize($color: grey, $amount: 0.8);
 }
 
 .package-title {
-  box-shadow: 0 0 1px 0 white;
-  background: transparentize($color: grey, $amount: 0.9);
-}
-
-.packages-li {
-  // height: 600px;
+  height: 30px;
 }
 
 .description-tile {
   height: 200px;
-  // position: absolute;
   font-size: smaller;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: transparentize($color: grey, $amount: 0.3);
+  z-index: 5;
 }
 
 .tile-description {
@@ -309,18 +281,14 @@ background: rgb(194, 182, 182);
 .hover-area {
   height: 197px;
   z-index: 4;
-  // background-color: transparent;
-  // color: transparent;
   margin-top: -10px;
 }
 
 .hover-area:hover {
   background-color: black;
-  border: white solid 2px;
   color: white;
   transition: 300ms ease-out;
   cursor: pointer;
-  border-top: solid white 5px;
 }
 
 //! Register
@@ -344,7 +312,6 @@ background: rgb(194, 182, 182);
 
 .input {
   width: 100%;
-  // margin-bottom: 0;
 }
 
 .label {

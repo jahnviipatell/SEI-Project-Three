@@ -40,9 +40,6 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
             <div className="hover-area" onClick={handleClick}>
               <p className="tile-description">
                 {description}
-                <br />
-                <br />
-                Click for more details...
               </p>
             </div>
           </div>
