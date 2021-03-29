@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReactMapGL from 'react-map-gl'
 import ShowPackageTile from './ShowPackageTile'
+import AllPackages from './AllPackages.js'
 
 
-const ShowPage = () => {
-
+const ShowPage = (props) => {
+  console.log(AllPackages)
+  console.log('props', props)
 
   const [viewPort, setViewPort] = useState({
     latitude: 64.842827,
@@ -17,34 +19,28 @@ const ShowPage = () => {
 
 
 
-
-  const [packages, setPackage] = useState(null)
+  const [locations, setLocations] = useState([])
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/packages')
-      setPackage(data)
+      const { data } = await axios.get('/api/places')
+      // console.log('data', data)
+      const packageData = data.filter(item => {
+        return item.packages.includes(props.name)
+      })
+      // console.log('packageData', packageData)
+      setLocations(packageData)
     }
     getData()
   }, [])
 
+  console.log(props.name)
+
+  if (locations.length < 1) return null 
+
+  // console.log('locations', locations)
 
 
-  // const [days, setDays] = useState(null)
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const { data } = await axios.get('/api/places')
-  //     setDays(data)
-  //   }
-  //   getData()
-  // }, [])
-
-
-
-  // if (!days) return null 
-  if (!packages) return null
-  // if (!locations) return null 
 
   return (
     <>
@@ -59,13 +55,12 @@ const ShowPage = () => {
 
         </ReactMapGL>
         <div className="map-controller"> 
-          {packages.map(item => (
-     
-            <ShowPackageTile
-              key={item._id}
-              { ...item}/>
-
-          )) }
+          {locations.map(location => {
+            <ShowPackageTile 
+              key={location._id}
+              { ...location}/>
+          })}
+         
 
         </div> 
 

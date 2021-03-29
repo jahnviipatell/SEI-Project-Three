@@ -1,39 +1,18 @@
 
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
+// import axios from 'axios'
 // import Media from 'react-bootstrap/Media'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
 const ShowPackageTile = ( props ) => {
 
-  // console.log('yes showpackage tile works')
-  const [locations, setLocations] = useState(null)
-
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/places')
-      // console.log('data', data)
-      const packageData = data.filter(item => {
-        return item.packages.includes(props.name)
-      })
-      setLocations(packageData)
-    }
-    getData()
-  }, [])
-
-  // console.log(props.name)
-
-  if (!locations) return null 
-
-  console.log('locations', locations)
 
   return (
     
     <>
-      <Link to={`/packages/${props._id}`} key={props._id}>
-        <h1>{locations.nameOfDestination}</h1>
-      </Link>
+      <h1>{props.nameOfDestination}</h1>
+      {/* </Link> */}
       {/* <Media>
         <Media.Body>
           <h4>{title}</h4>
