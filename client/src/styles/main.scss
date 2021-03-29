@@ -140,7 +140,7 @@ background: rgb(194, 182, 182);
   text-align: center;
   margin-top: 20vh;
   z-index: 6;
-  font-size: 50px;
+  font-size: 65px;
   font-weight: 900;
   color: white;
 }
@@ -284,12 +284,17 @@ background: rgb(194, 182, 182);
   margin-top: -10px;
 }
 
-.hover-area:hover {
-  background-color: black;
-  color: white;
-  transition: 300ms ease-out;
-  cursor: pointer;
-}
+// .hover-area:hover {
+//   background-color: black;
+//   color: white;
+//   transition: 300ms ease-out;
+//   cursor: pointer;
+// }
+
+// .filter-button {
+//   z-index: 6;
+//   background-color: grey;
+// }
 
 //! Register
 .register, .login {

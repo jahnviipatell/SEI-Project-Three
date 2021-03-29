@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import LargeTile from './LargeTile'
-// import Dropdown from 'react-bootstrap/Dropdown'
-// import DropdownButton from 'react-bootstrap/DropdownButton'
 import Navbar from '../Navbar'
 import Carousel from 'react-bootstrap/Carousel'
 
@@ -12,6 +10,15 @@ const AllPackages = () => {
 
   const [packages, setPackages] = useState(null)
   // console.log(setPackageData)
+
+  //! UNCOMMENT BELOW
+  // const [toggle, setToggle] = useState(false)
+  // console.log(toggle)
+
+  // const handleClick = (event) => {
+  //   console.log('CLICKED', event.target)
+  //   setToggle(true)
+  // }
 
   useEffect(() => {
     const getData = async () => {
@@ -30,6 +37,10 @@ const AllPackages = () => {
       </div>
       <div className="caption">
         <p>Explore Iceland</p>
+        {/* <div className="filters">
+          <button className="filter-button" onClick={handleClick}>Summer</button>
+          <button className="filter-button">Winter</button>
+        </div> */}
       </div>
       <Navbar className="nav-grey" />
       <div div className="packages-container">

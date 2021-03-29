@@ -45,7 +45,7 @@ export default [
   },
 
   {
-    name: 'Northern Lights West & South Coast',
+    name: 'Northern Lights West Coast',
     price: 409,
     description: 'Get cool on this eight-day and seven-night winter adventure in Iceland. Enter Ice caves by the Jökulsárlón glacier lagoon, travel the Golden Circle, hike otherworldly glaciers, explore thundering waterfalls and immerse yourself in Reykjavík\'s vibrant city life!',
     duration: 8,
