@@ -1,16 +1,16 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 
 const LargeTile = ({ _id, image, name, description, season, duration, price }) => {
 
 
-  const history = useHistory()
+  // const history = useHistory()
 
-  const handleClick = (event) => {
-    console.log(event)
-    history.push('/packages/:id')
-  }
+  // const handleClick = (event) => {
+  //   console.log(event)
+  //   history.push('/packages/:id')
+  // }
 
 
   return (
@@ -37,7 +37,7 @@ const LargeTile = ({ _id, image, name, description, season, duration, price }) =
             </div>
           </div>
           <div className="description-tile">
-            <div className="hover-area" onClick={handleClick}>
+            <div className="hover-area" >
               <p className="tile-description">
                 {description}
                 <br />
