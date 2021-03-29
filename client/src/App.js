@@ -6,6 +6,7 @@ import MyNavbar from './Navbar'
 import AllPackages from './components/AllPackages'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
+import ShowPage from './components/ShowPage'
 
 const App = () => {
 
@@ -19,11 +20,11 @@ const App = () => {
         <Route path="/map">
           <MultipleMarkers />
         </Route>
+        <Route path="/packages/:id">
+          <ShowPage />
+        </Route>
         <Route path="/packages">
           <AllPackages />
-        </Route>
-        <Route path="/packages/:id">
-
         </Route>
         <Route path="/register">
           <MyNavbar className="nav-home" />

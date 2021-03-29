@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+
 const placeSchema = new mongoose.Schema({
   nameOfDestination: { type: String, required: true, unique: true },
   typeOfDestination: { type: String, required: true },
@@ -10,9 +11,19 @@ const placeSchema = new mongoose.Schema({
   icon: { type: String, required: true },
   packageId: { type: Number },
   winterAccess: { type: Boolean, required: true },
-  star: { type: String },
-  day: [{ type: Number, required: true }],
-  packages: [{ type: String, required: true }]
+  star: { type: String }
 })
 
-export default mongoose.model('Place', placeSchema)
+
+
+const daySchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  subtitle: { type: String, required: true },
+  day: { type: Number, required: true },
+  description: { type: String, required: true  },
+  image: { type: String, required: true  },
+  places: [placeSchema]
+})
+
+
+export default mongoose.model('Day', daySchema)
