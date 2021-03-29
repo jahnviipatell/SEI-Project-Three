@@ -1,36 +1,38 @@
 
-import React from 'react'
-// import axios from 'axios'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 // import Media from 'react-bootstrap/Media'
 import { Link } from 'react-router-dom'
 
 
 const ShowPackageTile = ( props ) => {
 
-  console.log('yes showpackage tile works')
-  // const [locations, setLocations] = useState(null)
+  // console.log('yes showpackage tile works')
+  const [locations, setLocations] = useState(null)
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const { data } = await axios.get('api/places')
-  //     const packageData = data.filter(item => {
-  //       return item.packages.includes(props.name)
-  //     })
-  //     setLocations(packageData)
-  //   }
-  //   getData()
-  // }, [])
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get('/api/places')
+      // console.log('data', data)
+      const packageData = data.filter(item => {
+        return item.packages.includes(props.name)
+      })
+      setLocations(packageData)
+    }
+    getData()
+  }, [])
 
-  // console.log(locations)
+  // console.log(props.name)
 
+  if (!locations) return null 
 
-  // if (!dayss) return null
+  console.log('locations', locations)
 
   return (
     
     <>
       <Link to={`/packages/${props._id}`} key={props._id}>
-        <h1>All Days</h1>
+        <h1>{locations.nameOfDestination}</h1>
       </Link>
       {/* <Media>
         <Media.Body>

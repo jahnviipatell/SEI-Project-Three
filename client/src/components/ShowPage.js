@@ -16,6 +16,8 @@ const ShowPage = () => {
   })
 
 
+
+
   const [packages, setPackage] = useState(null)
 
   useEffect(() => {
@@ -26,23 +28,23 @@ const ShowPage = () => {
     getData()
   }, [])
 
-  console.log('packages>>>>>', packages)
 
 
-  const [days, setDays] = useState(null)
+  // const [days, setDays] = useState(null)
 
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/places')
-      setDays(data)
-    }
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const { data } = await axios.get('/api/places')
+  //     setDays(data)
+  //   }
+  //   getData()
+  // }, [])
 
 
 
-  if (!days) return null 
+  // if (!days) return null 
   if (!packages) return null
+  // if (!locations) return null 
 
   return (
     <>
@@ -58,10 +60,10 @@ const ShowPage = () => {
         </ReactMapGL>
         <div className="map-controller"> 
           {packages.map(item => (
-
+     
             <ShowPackageTile
               key={item._id}
-              { ...packages}/>
+              { ...item}/>
 
           )) }
 
