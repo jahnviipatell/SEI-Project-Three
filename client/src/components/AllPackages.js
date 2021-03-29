@@ -66,14 +66,14 @@ const AllPackages = () => {
             <div className="button-bar">
               <div className="drop-downs">
                 <div className="bootstrap-button">
-                  <DropdownButton id="dropdown-basic-button" variant="light" title="Season">{' '}
+                  <DropdownButton id="dropdown-basic-button" variant="light" title="Season" className="bring-to-front">{' '}
                     <Dropdown.Item href="/packages/summer">Summer</Dropdown.Item>
                     <Dropdown.Item href="/packages/winter">Winter</Dropdown.Item>
                     <Dropdown.Item href="/packages">All</Dropdown.Item>
                   </DropdownButton>
                 </div>
                 <div className="bootstrap-button">
-                  <DropdownButton id="dropdown-basic-button" variant="light" title="Duration">{' '}
+                  <DropdownButton id="dropdown-basic-button" variant="light" title="Duration" className="bring-to-front">{' '}
                     <Dropdown.Item href="#/packages/summer">7 Days</Dropdown.Item>
                     <Dropdown.Item href="#/packages/winter">8 Days</Dropdown.Item>
                     <Dropdown.Item href="#/packages/winter">10 Days</Dropdown.Item>
