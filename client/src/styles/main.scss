@@ -69,6 +69,10 @@ ul {
   background: transparentize($color: white, $amount: 0.7);
 }
 
+.nav-grey {
+  background-color: grey;
+}
+
 //!HOMEPAGE
 //  #root {
 //   height: 100vh;
@@ -144,7 +148,7 @@ background: rgb(194, 182, 182);
 
 .caption {
   position: absolute;
-  width: 100vw;
+  width: 40vw;
   text-align: center;
   margin-top: 60vh;
   z-index: 6;
@@ -186,7 +190,8 @@ background: rgb(194, 182, 182);
   flex-direction: column;
   justify-content: flex-end;
   // align-content: flex-start;
-  height: 280px;
+  // height: 280px;
+  height: 550px;
 }
 
 .bootstrap-button {
@@ -202,6 +207,7 @@ background: rgb(194, 182, 182);
 
 .packages-ul {
   width: 100vw;
+  // height: 400px;
   display: flex;
   align-content: flex-end;
   overflow-y: hidden;
@@ -209,12 +215,14 @@ background: rgb(194, 182, 182);
   box-shadow: 0 0 5px 0 white;
   background: #E7E7E7;
   padding-left: 0;
+  margin-left: 37vw;
 }
 
 .packages-li-container {
   position: relative;
-  height: 200px;
+  // height: 200px;
   display: flex;  
+  flex-direction: column;
   text-align: center;
   color: white;
   box-shadow: 0 0 10px 0 white;
@@ -223,7 +231,7 @@ background: rgb(194, 182, 182);
 }
 
 .package-background {
-  height: 100%;
+  height: 200px;
   border-radius: 1px;
   min-width: 180px;
   max-width: 300px;
@@ -232,34 +240,44 @@ background: rgb(194, 182, 182);
 
 .left {
   width: 100%;
-  position: absolute;
+  // position: absolute;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
   padding: 5px;
   height: 80px;
   font-size: large;
   font-weight: 600;
   z-index: 3;
+  background-color: grey;
 }
 
 .right {
-  position: absolute;
+  // position: absolute;
+  // display: flex;
+  // align-content: flex-end;
   font-weight: 500;
   font-size: smaller;
 }
 
 .package-details-ul {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  // flex-direction: column;
+  // justify-content: flex-start;
   padding-left: 0;
 }
 
 .package-details {
   margin-top: 10px;
-  align-self: flex-start;
+  // align-self: flex-start;
   padding: 5px;
-  text-align: left;
-  box-shadow: 0 0 1px 0 white;
-  background: transparentize($color: grey, $amount: 0.8);
+  text-align: center;
+  font-size: small;
+  width: 33%;
+  // display: flex
+  // justify-content: space-between;
+  // box-shadow: 0 0 1px 0 white;
+  // background: transparentize($color: grey, $amount: 0.8);
 }
 
 .package-title {
@@ -268,12 +286,12 @@ background: rgb(194, 182, 182);
 }
 
 .packages-li {
-  height: 200px;
+  // height: 600px;
 }
 
 .description-tile {
   height: 200px;
-  position: absolute;
+  // position: absolute;
   font-size: smaller;
   text-align: center;
   display: flex;
@@ -291,8 +309,8 @@ background: rgb(194, 182, 182);
 .hover-area {
   height: 197px;
   z-index: 4;
-  background-color: transparent;
-  color: transparent;
+  // background-color: transparent;
+  // color: transparent;
   margin-top: -10px;
 }
 
