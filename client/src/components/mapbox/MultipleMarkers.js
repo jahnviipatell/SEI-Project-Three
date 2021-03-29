@@ -68,7 +68,7 @@ const MultipleMarkers = () => {
           <Popup
             latitude={popup.latitude}
             longitude={popup.longitude}
-            closeOnClick={true}
+            closeOnClick={false}
             onClose={() => setPopup(null)}
           >
             {/* <div>{popup.nameOfDestination}</div> */}
