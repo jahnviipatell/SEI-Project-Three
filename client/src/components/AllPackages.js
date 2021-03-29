@@ -4,7 +4,7 @@ import LargeTile from './LargeTile'
 import Navbar from '../Navbar'
 import Carousel from 'react-bootstrap/Carousel'
 // import ShowPage from './ShowPage'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
 
@@ -88,16 +88,17 @@ const AllPackages = () => {
                 </DropdownButton>
               </div> */}
             </div>
-            <ul className="packages-ul">
-              {packages.map(trip => (
-                <Link to={`/packages/${trip._id}`} key={trip._id}>
-                  <LargeTile  {...trip} />
-                </Link>
-              ))}
-            </ul>
           </div>
+          <ul className="packages-ul">
+            {packages.map(trip => (
+              // <Link to={`/packages/${trip._id}`} key={trip._id}>
+              <LargeTile key={trip._id} {...trip} />
+              // </Link>
+            ))}
+          </ul>
         </div>
       </div>
+      {/* </div> */}
     </>
   )
 
