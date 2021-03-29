@@ -26,7 +26,6 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
       <Tab eventKey="profile" title="Description">
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
-            <Card.Title>Description</Card.Title>
             <Card.Text>{description}</Card.Text>
           </Card.Body>
         </Card>

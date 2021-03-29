@@ -54,7 +54,7 @@ const MultipleMarkers = () => {
       >
         {placeData.map(place => {
           return <Marker key={place._id} latitude={place.latitude} longitude={place.longitude}>
-            <span onClick={() => setPopup(place)}>
+            <span onClick={() => setPopup(place)} className="icon-main-map">
               {place.icon}
             </span>
           </Marker>
