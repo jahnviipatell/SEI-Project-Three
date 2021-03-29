@@ -5,7 +5,7 @@ import ShowPackageTile from './ShowPackageTile'
 import AllPackages from './AllPackages.js'
 
 
-const ShowPage = ( ...props) => {
+const ShowPage = ( ...props ) => {
   console.log(AllPackages)
   console.log('props', props)
 
