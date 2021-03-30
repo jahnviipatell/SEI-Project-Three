@@ -16,21 +16,38 @@ const AllPackages = () => {
   // console.log(setPackageData)
 
   //! UNCOMMENT BELOW
-  const [toggle, setToggle] = useState(false)
-  console.log(toggle)
+  const [toggle, setToggle] = useState(null)
+  console.log('toggle >>>', toggle)
 
   const handleClick = (event) => {
-    console.log('CLICKED', event.target)
-    setToggle(true)
+    console.log('CLICKED', event.target.value)
+    setToggle(event.target.value)
   }
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get('/api/packages')
-      setPackages(response.data)
+      const { data } = await axios.get('/api/packages')
+      const summerPackages = data.filter(item => {
+        return (item.season === 'Summer')
+      })
+      const winterPackages = data.filter(item => {
+        return (item.season === 'Winter')
+      })
+      if (toggle === 'Summer') {
+        setPackages(summerPackages)
+      } else if (toggle === 'Winter') {
+        setPackages(winterPackages)
+      } else {
+        setPackages(data)
+      }
+      console.log('Summer packages', summerPackages)
+      console.log('Winter packages', winterPackages)
     }
     getData()
-  }, [])
+  }, [toggle])
+
+
+
 
   if (packages.length < 1) return null
   console.log('PACKAGES>>>>', packages)
@@ -42,10 +59,11 @@ const AllPackages = () => {
       </div>
       <div className="caption">
         <p>Explore Iceland</p>
-        {/* <div className="filters">
-          <button className="filter-button" onClick={handleClick}>Summer</button>
-          <button className="filter-button">Winter</button>
-        </div> */}
+        <div className="filters">
+          <button className="filter-button" value="Summer" onClick={handleClick}>Summer</button>
+          <button className="filter-button" value="Winter" onClick={handleClick}>Winter</button>
+          <button className="filter-button" value="All" onClick={handleClick}>All</button>
+        </div>
       </div>
       <Navbar className="nav-grey" />
       <div div className="packages-container">
