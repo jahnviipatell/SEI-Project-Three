@@ -17,28 +17,28 @@ const LargeTile = (props) => {
 
   return (
     <>
-      <li className="packages-li" key={props._id}>
-        <div className="packages-li-container">
-          <img src={props.image} className="package-background" key={props._id} />
-          <div className="left">
-            <div className="package-title">
-              {props.name}
+      <Link to={`/packages/${props.packageNumber}`} style={{ textDecoration: 'none' }}>
+        <li className="packages-li" key={props._id}>
+          <div className="packages-li-container">
+            <img src={props.image} className="package-background" key={props._id} />
+            <div className="left">
+              <div className="package-title">
+                {props.name}
+              </div>
+              <div className="right" >
+                <ul className="package-details-ul">
+                  <li className="package-details">
+                    {props.duration} days
+                  </li>
+                  <li className="package-details">
+                    {props.season}
+                  </li>
+                  <li className="package-details">
+                    £{props.price}pp
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="right" >
-              <ul className="package-details-ul">
-                <li className="package-details">
-                  {props.duration} days
-                </li>
-                <li className="package-details">
-                  {props.season}
-                </li>
-                <li className="package-details">
-                  £{props.price}pp
-                </li>
-              </ul>
-            </div>
-          </div>
-          <Link to={`/packages/${props.packageNumber}`}>
             <div className="description-tile">
               <div className="hover-area">
                 {/* <div className="hover-area" onClick={handleClick}> */}
@@ -47,9 +47,10 @@ const LargeTile = (props) => {
                 </p>
               </div>
             </div>
-          </Link>
-        </div>
-      </li >
+          </div>
+        </li >
+      </Link>
+
     </>
   )
 }

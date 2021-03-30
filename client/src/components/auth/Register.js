@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -98,13 +99,15 @@ const Register = () => {
                 {errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation}</p>}
               </div>
               <div className="field">
-                <button type="submit" className="button is-fullwidth is-warning">Register Me!</button>
+                <Link to={`/${formData.username}`}>
+                  <button type="submit" className="button is-fullwidth is-warning">Register Me!</button>
+                </Link>
               </div>
             </form>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
 
   )
 }

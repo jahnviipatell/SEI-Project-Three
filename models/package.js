@@ -11,4 +11,8 @@ const packageSchema = new mongoose.Schema({
   packageNumber: { type: Number, required: true, unique: true }
 })
 
+
+// ! INCLUDE virtual fields when returning JSON response 
+packageSchema.set('toJSON', { virtuals: true })
+
 export default mongoose.model('Package', packageSchema)

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -57,7 +58,9 @@ const Login = () => {
                 </div>
               </div>
               <div className="field">
-                <button type="submit" className="button is-fullwidth is-warning">Log Me In!</button>
+                <Link to={`/${formData.username}`}>
+                  <button type="submit" className="button is-fullwidth is-warning">Log Me In!</button>
+                </Link>
               </div>
             </form>
           </div>
