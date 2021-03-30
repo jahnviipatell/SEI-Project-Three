@@ -8,6 +8,21 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 })
 
+//! Reverse relationship to see what shows the user has created
+userSchema.virtual('savedPackages', {
+  ref: 'Package',
+  localField: '_id',
+  foreignField: 'owner'
+})
+
+//! Remove password from user when populating 
+userSchema.set('toJSON', {
+  virtuals: true,
+  transform(_doc, json) {
+    delete json.password
+    return json
+  }
+})
 
 // * Define virtual field on schema
 
