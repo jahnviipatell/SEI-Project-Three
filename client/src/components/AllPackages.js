@@ -33,6 +33,7 @@ const AllPackages = () => {
   }, [])
 
   if (packages.length < 1) return null
+  console.log('PACKAGES>>>>', packages)
 
   return (
     <>

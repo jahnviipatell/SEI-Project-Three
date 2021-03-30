@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReactMapGL from 'react-map-gl'
 import ShowPackageTile from './ShowPackageTile'
-import AllPackages from './AllPackages.js'
+// import AllPackages from './AllPackages.js'
+import { useParams } from 'react-router-dom'
 
 
-const ShowPage = (props) => {
-  console.log(AllPackages)
-  console.log('props', props)
+const ShowPage = () => {
+  // console.log(AllPackages)
+  // console.log('props', props)
+  const { id } = useParams()
+  console.log('ID>>>>>', id)
 
   const [viewPort, setViewPort] = useState({
     latitude: 64.842827,
@@ -24,21 +27,23 @@ const ShowPage = (props) => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/places')
-      // console.log('data', data)
+      console.log('data', data)
       const packageData = data.filter(item => {
-        return item.packages.includes(props.name)
+        return item.packages.filter(index => {
+          return index === id
+        })
       })
-      // console.log('packageData', packageData)
+      console.log('packageData', packageData)
       setLocations(packageData)
     }
     getData()
-  }, [])
+  }, [id])
 
-  console.log(props.name)
+  // console.log(props.name)
 
   if (locations.length < 1) return null 
 
-  // console.log('locations', locations)
+  console.log('locations', locations)
 
 
 

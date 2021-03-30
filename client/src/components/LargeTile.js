@@ -1,48 +1,53 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+// import ShowPage from './ShowPage'
 
 
-const LargeTile = ({ _id, image, name, description, season, duration, price }) => {
+const LargeTile = (props) => {
 
 
-  const history = useHistory()
+  // const history = useHistory()
 
-  const handleClick = (event) => {
-    console.log(event)
-    history.push('/packages/:id')
-  }
+  // const handleClick = (event) => {
+  //   console.log(event)
+  //   history.push('/packages/:id')
+  // }
 
 
   return (
     <>
-      <li className="packages-li" key={_id}>
+      <li className="packages-li" key={props._id}>
         <div className="packages-li-container">
-          <img src={image} className="package-background" key={_id} />
+          <img src={props.image} className="package-background" key={props._id} />
           <div className="left">
             <div className="package-title">
-              {name}
+              {props.name}
             </div>
             <div className="right" >
               <ul className="package-details-ul">
                 <li className="package-details">
-                  {duration} days
+                  {props.duration} days
                 </li>
                 <li className="package-details">
-                  {season}
+                  {props.season}
                 </li>
                 <li className="package-details">
-                  £{price}pp
+                  £{props.price}pp
                 </li>
               </ul>
             </div>
           </div>
-          <div className="description-tile">
-            <div className="hover-area" onClick={handleClick}>
-              <p className="tile-description">
-                {description}
-              </p>
+          <Link to={`/packages/${props.packageNumber}`}>
+            <div className="description-tile">
+              <div className="hover-area">
+                {/* <div className="hover-area" onClick={handleClick}> */}
+                <p className="tile-description">
+                  {props.description}
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </li >
     </>
