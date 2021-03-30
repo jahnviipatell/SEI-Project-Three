@@ -6,7 +6,7 @@ import React from 'react'
 
 
 const ShowPackageTile = ( props ) => {
-
+  console.log('props',props)
 
   return (
     
