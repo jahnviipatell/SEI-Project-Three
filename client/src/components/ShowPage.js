@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ReactMapGL from 'react-map-gl'
+import ReactMapGL, { Marker } from 'react-map-gl'
 import ShowPackageTile from './ShowPackageTile'
 // import AllPackages from './AllPackages.js'
 import { useParams } from 'react-router-dom'
@@ -10,7 +10,6 @@ const ShowPage = () => {
   // console.log(AllPackages)
   // console.log('props', props)
   const { id } = useParams()
-  console.log('ID>>>>>', id)
 
   const [viewPort, setViewPort] = useState({
     latitude: 64.842827,
@@ -33,17 +32,17 @@ const ShowPage = () => {
           return index === id
         })
       })
-      console.log('packageData', packageData)
+      // console.log('packageData', packageData)
       setLocations(packageData)
     }
     getData()
-  }, [id])
+  }, [])
 
   // console.log(props.name)
 
   if (locations.length < 1) return null 
 
-  console.log('locations', locations)
+  // console.log('locations', locations)
 
 
 
@@ -56,16 +55,20 @@ const ShowPage = () => {
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
           height='100%'
           width='100%'
-          mapStyle='mapbox://styles/mapbox/streets-v11' >
-
+          mapStyle='mapbox://styles/mapbox/light-v10' >
+          {locations.map(location => { 
+            return <Marker key ={location._id} latitude={location.latitude} longitude={location.longitude}>
+              <p>{location.icon}</p>
+            </Marker>
+          })
+          }
         </ReactMapGL>
         <div className="map-controller"> 
           {locations.map(location => {
-            <ShowPackageTile 
+            return <ShowPackageTile 
               key={location._id}
               { ...location}/>
           })}
-         
 
         </div> 
 
@@ -75,8 +78,6 @@ const ShowPage = () => {
 
 
   )
-
-
 
 }
 
