@@ -13,7 +13,7 @@ export default [
     packageId: 1,
     winterAccess: true,
     day: [1, 9],
-    packages: ['1 Week Complete Ring Road', 'Complete Ring Road of Iceland']
+    packages: [1, 2]
   },
 
   {
@@ -27,7 +27,7 @@ export default [
     packageId: 1,
     winterAccess: true,
     day: [1, 9],
-    packages: ['1 Week Complete Ring Road', 'Complete Ring Road of Iceland']
+    packages: [1, 2]
   },
 
   {
@@ -41,7 +41,7 @@ export default [
     packageId: 1,
     winterAccess: true,
     day: [1, 9],
-    packages: ['1 Week Complete Ring Road', 'Complete Ring Road of Iceland']
+    packages: [1, 2]
   }
 
 

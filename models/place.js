@@ -12,7 +12,7 @@ const placeSchema = new mongoose.Schema({
   winterAccess: { type: Boolean, required: true },
   star: { type: String },
   day: [{ type: Number, required: true }],
-  packages: [{ type: String, required: true }]
+  packages: [{ type: Number, required: true }]
 })
 
 export default mongoose.model('Place', placeSchema)
