@@ -136,14 +136,46 @@ background: rgb(194, 182, 182);
 
 .caption {
   position: absolute;
-  width: 40vw;
+  width: 50vw;
   text-align: center;
   margin-top: 20vh;
   z-index: 6;
   font-size: 65px;
   font-weight: 900;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
+
+.p-caption {
+  margin-bottom: 0;
+}
+
+.filters {
+  display: flex;
+  margin-left: 6.5vw;
+  height: 5vh;
+  margin-top: 1vh;
+}
+
+.filter-button {
+  z-index: 6;
+  height: 20px;
+  width: 7vw;
+  font-size: 13px;
+  font-weight: 550;
+  border: white;
+  box-shadow: 0 0 1px 0 white;
+  background: transparentize($color: white, $amount: 0.5);
+  border-radius: 5px;
+  // margin: 10px;
+  transition: 0.2s ease-in-out;
+  justify-content: space-between;
+}
+
+.filter-button:hover {
+  background: rgb(194, 182, 182);
+  }
 
 .carousel-indicators {
   display: none;
@@ -197,14 +229,14 @@ background: rgb(194, 182, 182);
 }
 
 .packages-ul {
-  width: 88vw;
+  width: 87vw;
   display: flex;
   align-content: flex-end;
   overflow-y: hidden;
   overflow-x: scroll;
   box-shadow: 0 0 1px 0 white;
   padding-left: 0;
-  margin-left: 12vw;
+  margin-left: 6.5vw;
 }
 
 .packages-li-container {
@@ -249,7 +281,7 @@ background: rgb(194, 182, 182);
 }
 
 .package-details {
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 5px;
   text-align: center;
   font-size: small;
@@ -275,7 +307,8 @@ background: rgb(194, 182, 182);
 .tile-description {
   padding: 2px;
   height: 100px;
-  margin-top: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 .hover-area {
@@ -291,21 +324,7 @@ background: rgb(194, 182, 182);
 //   cursor: pointer;
 // }
 
-.filter-button {
-  z-index: 6;
-  height: 20px;
-  width: 5vw;
-  font-size: 13px;
-  font-weight: 550;
-  border: white;
-  box-shadow: 0 0 1px 0 white;
-  background: transparentize($color: white, $amount: 0.7);
-  border-radius: 5px;
-  padding: 8px;
-  margin: 10px;
-  transition: 0.2s ease-in-out;
-  justify-content: space-between;
-}
+
 
 //! Register
 .register, .login {

@@ -58,12 +58,7 @@ const AllPackages = () => {
 
       </div>
       <div className="caption">
-        <p>Explore Iceland</p>
-        <div className="filters">
-          <button className="filter-button" value="Summer" onClick={handleClick}>Summer</button>
-          <button className="filter-button" value="Winter" onClick={handleClick}>Winter</button>
-          <button className="filter-button" value="All" onClick={handleClick}>All</button>
-        </div>
+        <p className="p-caption">Explore Iceland</p>
       </div>
       <Navbar className="nav-grey" />
       <div div className="packages-container">
@@ -107,6 +102,11 @@ const AllPackages = () => {
                 </DropdownButton>
               </div> */}
             </div>
+          </div>
+          <div className="filters">
+            <button className="filter-button" value="Summer" onClick={handleClick}>Summer</button>
+            <button className="filter-button" value="Winter" onClick={handleClick}>Winter</button>
+            <button className="filter-button" value="All" onClick={handleClick}>All</button>
           </div>
           <ul className="packages-ul">
             {packages.map(trip => (
