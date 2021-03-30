@@ -16,13 +16,13 @@ const AllPackages = () => {
   // console.log(setPackageData)
 
   //! UNCOMMENT BELOW
-  // const [toggle, setToggle] = useState(false)
-  // console.log(toggle)
+  const [toggle, setToggle] = useState(false)
+  console.log(toggle)
 
-  // const handleClick = (event) => {
-  //   console.log('CLICKED', event.target)
-  //   setToggle(true)
-  // }
+  const handleClick = (event) => {
+    console.log('CLICKED', event.target)
+    setToggle(true)
+  }
 
   useEffect(() => {
     const getData = async () => {
