@@ -137,10 +137,10 @@ background: rgb(194, 182, 182);
 .caption {
   position: absolute;
   width: 50vw;
-  text-align: center;
-  margin-top: 20vh;
+  text-align: left;
+  margin-top: 25vh;
   z-index: 6;
-  font-size: 65px;
+  font-size: 10vh;
   font-weight: 900;
   color: white;
   display: flex;
@@ -148,7 +148,9 @@ background: rgb(194, 182, 182);
 }
 
 .p-caption {
+  width: 50vw;
   margin-bottom: 0;
+  margin-left: 6vw;
 }
 
 .filters {
@@ -168,9 +170,9 @@ background: rgb(194, 182, 182);
   box-shadow: 0 0 1px 0 white;
   background: transparentize($color: white, $amount: 0.5);
   border-radius: 5px;
-  // margin: 10px;
   transition: 0.2s ease-in-out;
   justify-content: space-between;
+  margin-right: 4px;
 }
 
 .filter-button:hover {
@@ -230,6 +232,7 @@ background: rgb(194, 182, 182);
 
 .packages-ul {
   width: 87vw;
+  height: 68vh;
   display: flex;
   align-content: flex-end;
   overflow-y: hidden;
@@ -237,6 +240,7 @@ background: rgb(194, 182, 182);
   box-shadow: 0 0 1px 0 white;
   padding-left: 0;
   margin-left: 6.5vw;
+  margin-bottom: 2vh;
 }
 
 .packages-li-container {
