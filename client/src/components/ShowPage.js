@@ -61,11 +61,10 @@ const ShowPage = () => {
         </ReactMapGL>
         <div className="map-controller"> 
           {locations.map(location => {
-            <ShowPackageTile 
+            return <ShowPackageTile 
               key={location._id}
               { ...location}/>
           })}
-         
 
         </div> 
 
