@@ -291,10 +291,21 @@ background: rgb(194, 182, 182);
 //   cursor: pointer;
 // }
 
-// .filter-button {
-//   z-index: 6;
-//   background-color: grey;
-// }
+.filter-button {
+  z-index: 6;
+  height: 20px;
+  width: 5vw;
+  font-size: 13px;
+  font-weight: 550;
+  border: white;
+  box-shadow: 0 0 1px 0 white;
+  background: transparentize($color: white, $amount: 0.7);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px;
+  transition: 0.2s ease-in-out;
+  justify-content: space-between;
+}
 
 //! Register
 .register, .login {
