@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 // import Media from 'react-bootstrap/Media'
 // import { Link } from 'react-router-dom'
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 
 const ShowPackageTile = () => {
 
-  // const { id } = useParams()
+  const { id } = useParams()
   const [locations, setLocations] = useState([])
   const [day, setDay] = useState(null)
 
@@ -27,10 +27,10 @@ const ShowPackageTile = () => {
       //   return item.packages.includes(parseInt(id))
       // })
       const dayOne = data.filter(item => {
-        return item.day1 === true
+        return item.packages.includes(parseInt(id)) && item.day1 === true
       })
       const dayTwo = data.filter(item => {
-        return item.day2 === true
+        return item.packages.includes(parseInt(id)) && item.day2 === true
       })
       if (day === 'dayOne') {
         setLocations(dayOne)
@@ -57,7 +57,9 @@ const ShowPackageTile = () => {
         <button value="dayTwo" onClick={handleClick}>2</button>
       </div>
       <div className="days-container">
-
+        {locations.map(location => {
+          return <h1 key={location._id}>{location.nameOfDestination}</h1>
+        })}
       </div>
     </>
   )
