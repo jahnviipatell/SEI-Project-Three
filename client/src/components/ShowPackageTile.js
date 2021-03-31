@@ -4,6 +4,7 @@ import axios from 'axios'
 // import Media from 'react-bootstrap/Media'
 // import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import ShowTile from './ShowTile'
 
 
 const ShowPackageTile = () => {
@@ -57,17 +58,16 @@ const ShowPackageTile = () => {
         <button value="dayTwo" onClick={handleClick}>2</button>
       </div>
       <div className="days-container">
-        {locations.map(location => {
-          return <h1 key={location._id}>{location.nameOfDestination}</h1>
-        })}
+        <ul>
+          {locations.map(location => {
+            return <ShowTile
+              key={location._id}
+              {...location} />
+          })}
+        </ul>
       </div>
     </>
   )
-
-
-
-
-
 
 }
 
