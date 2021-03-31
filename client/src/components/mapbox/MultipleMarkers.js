@@ -8,9 +8,9 @@ import Minitile from './Minitile'
 const MultipleMarkers = () => {
 
   const [viewPort, setViewPort] = useState({
-    latitude: 64.842827,
+    latitude: 64.942827,
     longitude: -18.164241,
-    zoom: 4,
+    zoom: 6,
     bearing: 0,
     pitch: 0
   })
@@ -50,7 +50,7 @@ const MultipleMarkers = () => {
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
           height='100%'
           width='100%'
-          mapStyle='mapbox://styles/mapbox/streets-v11'
+          mapStyle='mapbox://styles/mapbox/light-v10'
         // latitude={placeData[0].latitude}
         // longitude={placeData[0].longitude}
         // zoom={7}
