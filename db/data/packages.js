@@ -75,17 +75,17 @@ export default [
     reviewRating: 4.7,
     season: 'Summer',
     packageNumber: 7
-  },
-
-  {
-    name: 'Reykjavik & The Blue Lagoon',
-    price: 263,
-    description: 'On your trip, you\'ll visit some incredible places, including the Blue Lagoon, Golden Circle, Reynisfjara black sand beach, Jökulsárlón glacier lagoon and many of Iceland\'s most famous waterfalls.',
-    duration: 5,
-    image: '/assets/adam-jang-zzOPJR7tlK0-unsplash.jpg',
-    reviewRating: 4.7,
-    season: 'Summer',
-    packageNumber: 8
   }
+
+  // {
+  //   name: 'Reykjavik & The Blue Lagoon',
+  //   price: 263,
+  //   description: 'On your trip, you\'ll visit some incredible places, including the Blue Lagoon, Golden Circle, Reynisfjara black sand beach, Jökulsárlón glacier lagoon and many of Iceland\'s most famous waterfalls.',
+  //   duration: 5,
+  //   image: '/assets/adam-jang-zzOPJR7tlK0-unsplash.jpg',
+  //   reviewRating: 4.7,
+  //   season: 'Summer',
+  //   packageNumber: 8
+  // }
 
 ]
