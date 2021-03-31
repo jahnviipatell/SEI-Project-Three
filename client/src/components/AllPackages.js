@@ -108,7 +108,7 @@ const AllPackages = () => {
             <button className="filter-button" value="Winter" onClick={handleClick}>Winter</button>
             <button className="filter-button" value="All" onClick={handleClick}>All</button>
           </div>
-          <ul className="packages-ul">
+          <ul className="packages-ul" id="no-scroll1">
             {packages.map(trip => (
               // <Link to={`/packages/${trip._id}`} key={trip._id}>
               <LargeTile key={trip._id} {...trip} />
