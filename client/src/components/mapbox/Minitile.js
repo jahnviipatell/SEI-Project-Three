@@ -10,7 +10,13 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
   const [key, setKey] = useState('home')
 
   const handleClick = async () => {
-    await axios.patch(`/api/places/${_id}`, )
+    const token = window.localStorage.getItem('token')
+    await axios.patch(`/api/places/${_id}`, _id, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
   }
 
   return (
