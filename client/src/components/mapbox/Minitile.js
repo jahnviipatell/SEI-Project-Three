@@ -11,7 +11,7 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
 
   const handleClick = async () => {
     const token = window.localStorage.getItem('token')
-    await axios.patch(`/api/places/${_id}`, _id, {
+    await axios.patch(`/api/places/${_id}`, { _id }, {
       headers: {
         Authorization: `Bearer ${token}`
       }

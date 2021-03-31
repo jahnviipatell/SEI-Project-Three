@@ -13,11 +13,12 @@ export const getUserProfile = async (req, res) => {
 }
 
 export const addSavedPlace = async (req, res) => {
+  console.log('REQ BODY', req.body)
   try {
     const user = await User.findById(req.currentUser._id)
     if (!user) throw new Error('Cannot find user')
     const newSavedPlace = await Place.findById(req.body._id)
-    console.log('PLACE ID>>>', typeof newSavedPlace)
+    console.log('PLACE ID>>>', newSavedPlace)
     user.savedPlaces.addToSet(newSavedPlace)
     await user.save()
     return res.status(200).json(user)
