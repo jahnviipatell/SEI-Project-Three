@@ -460,7 +460,7 @@ h6 {
   margin-bottom: 20px;
 }
 
-.package-title {
+.package-title-show {
   height: fit-content;
   // background: transparentize($color: grey, $amount: 0.3);
   box-shadow: 0 0 2px 0 white;
@@ -486,4 +486,14 @@ h6 {
 
 .show-p {
   font-size: smaller;
+}
+
+.map-container {
+  position: absolute;
+  margin-top: -9vh;
+  height: 100vh;
+}
+
+.map-controller {
+  margin-top: 10vh;
 }
