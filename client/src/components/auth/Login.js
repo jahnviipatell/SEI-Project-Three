@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -19,8 +19,10 @@ const Login = () => {
 
   const handleSubmit = async event => {
     event.preventDefault()
+    console.log('TOKEN>>>>')
     const response = await axios.post('api/login', formData)
     window.localStorage.setItem('token', response.data.token)
+    
     history.push('/packages')
     console.log(response)
   }
@@ -58,9 +60,9 @@ const Login = () => {
                 </div>
               </div>
               <div className="field">
-                <Link to={`/${formData.username}`}>
-                  <button type="submit" className="button register-button">Log Me In!</button>
-                </Link>
+                {/* <Link to={`/${formData.username}`}> */}
+                <button type="submit" className="button register-button">Log Me In!</button>
+                {/* </Link> */}
               </div>
             </form>
           </div>

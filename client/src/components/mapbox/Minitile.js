@@ -2,11 +2,22 @@ import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import axios from 'axios'
 
 
 const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, description }) => {
 
   const [key, setKey] = useState('home')
+
+  const handleClick = async () => {
+    const token = window.localStorage.getItem('token')
+    await axios.patch(`/api/places/${_id}`, { _id }, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
+  }
 
   return (
     <Tabs
@@ -27,6 +38,15 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
             <Card.Text>{description}</Card.Text>
+          </Card.Body>
+        </Card>
+      </Tab>
+      <Tab eventKey="save" title="Save">
+        <Card style={{ width: '18rem' }} key={_id}>
+          <Card.Body>
+            <Card.Text>Save to profile:
+              <button type="button" onClick={handleClick}>Save!</button>
+            </Card.Text>
           </Card.Body>
         </Card>
       </Tab>

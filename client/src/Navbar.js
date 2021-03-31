@@ -13,6 +13,7 @@ const MyNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/map">Map</Nav.Link>
+          <Nav.Link href="/profile">Profile</Nav.Link>
           <Nav.Link href="/register">Sign up</Nav.Link>
           <Nav.Link href="/login">Log in</Nav.Link>
         </Nav>
