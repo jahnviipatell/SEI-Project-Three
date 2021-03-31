@@ -561,8 +561,9 @@ h6 {
 }
 
 .saved-img {
-  // width: 100%;
+  // position: absolute;
   z-index: 5;
+  height: 100%;
 }
 
 .saved-title {
