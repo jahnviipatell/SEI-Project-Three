@@ -8,6 +8,10 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
 
   const [key, setKey] = useState('home')
 
+  const handleClick = async (event) => {
+    console.log(event.target.value)
+  }
+
   return (
     <Tabs
       id="controlled-tab-example"
@@ -27,6 +31,15 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
             <Card.Text>{description}</Card.Text>
+          </Card.Body>
+        </Card>
+      </Tab>
+      <Tab eventKey="save" title="Save">
+        <Card style={{ width: '18rem' }} key={_id}>
+          <Card.Body>
+            <Card.Text>Save to profile:
+              <button type="button" onClick={handleClick}>Save!</button>
+            </Card.Text>
           </Card.Body>
         </Card>
       </Tab>
