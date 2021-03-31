@@ -11,7 +11,7 @@ const ShowPackageTile = () => {
 
   const { id } = useParams()
   const [locations, setLocations] = useState([])
-  const [day, setDay] = useState(null)
+  const [day, setDay] = useState([])
 
   const handleClick = (event) => {
     console.log('CLICKED', event.target.value)
@@ -28,10 +28,10 @@ const ShowPackageTile = () => {
       //   return item.packages.includes(parseInt(id))
       // })
       const dayOne = data.filter(item => {
-        return item.packages.includes(parseInt(id)) && item.day1 === true
+        return (item.packages.includes(parseInt(id)) && item.day1 === true)
       })
       const dayTwo = data.filter(item => {
-        return item.packages.includes(parseInt(id)) && item.day2 === true
+        return (item.packages.includes(parseInt(id)) && item.day2 === true)
       })
       if (day === 'dayOne') {
         setLocations(dayOne)
@@ -42,8 +42,8 @@ const ShowPackageTile = () => {
       }
       // console.log('packageData', packageData)
       // setLocations(packageData)
-      console.log('dayOne', dayOne)
-      console.log('dayTwo', dayTwo)
+      // console.log('dayOne', dayOne)
+      // console.log('dayTwo', dayTwo)
     }
     getData()
   }, [day])
@@ -59,10 +59,11 @@ const ShowPackageTile = () => {
       </div>
       <div className="days-container">
         <ul>
-          {locations.map(location => {
+          {locations.map(item => {
             return <ShowTile
-              key={location._id}
-              {...location} />
+              key={item._id}
+              {...item}
+            />
           })}
         </ul>
       </div>
@@ -73,43 +74,3 @@ const ShowPackageTile = () => {
 
 export default ShowPackageTile
 
-
-
-// {locations.map(location => {
-//   return <h1 key={location._id}>
-//     {location.nameOfDestination}
-//   </h1>
-// })}
-{/* <Media> */ }
-{/* <Media.Body> */ }
-{/* <h5>Accomodation</h5> */ }
-{/* <h6>{hotelName}</h6> */ }
-{/* <p>    */ }
-//          //<img
-//             width={250}
-//             height={150}
-//             className="float-left mr-2 mb-1"
-//             src={hotelImage}
-//             alt="Generic placeholder"
-//           />
-//           {hotelDescription}
-//         </p>
-//       </Media.Body>
-//     </Media>
-
-//     <Media>
-//       <Media.Body>
-//         <h5>Restaurants</h5>
-//         <h6>{restaurantName}</h6>
-//         <p>   
-//           <img
-//             width={250}
-//             height={150}
-//             className="float-left mr-2 mb-1"
-//             src={restaurantImage}
-//             alt="Generic placeholder"
-//           />
-//           {restaurantDescription}
-//         </p>
-//       </Media.Body>
-//     </Media> */}

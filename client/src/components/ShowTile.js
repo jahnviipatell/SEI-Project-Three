@@ -8,14 +8,6 @@ import Media from 'react-bootstrap/Media'
 const ShowTile = (props) => {
 
 
-  // const history = useHistory()
-
-  // const handleClick = (event) => {
-  //   console.log(event)
-  //   history.push('/packages/:id')
-  // }
-
-
   return (
     <>
       <li>
