@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+import GetMyPlaces from './GetMyPlaces'
 
 const UserProfile = () => {
+
+  const [userData, setUserData] = useState(null)
 
   useEffect(() => {
     const getUser = async() => {
@@ -11,13 +15,28 @@ const UserProfile = () => {
           Authorization: `Bearer ${token}`
         }
       })
-      console.log(response)
+      setUserData(response.data)
     }
     getUser()
   }, [])
 
+  if (!userData) return null
+  console.log(userData)
+  // useEffect(() => {
+  //   const getPlaces = async() => {
+  //     const placesResponse = await axios.get('/api/places')
+  //     console.log(placesResponse)
+  //   }
+  //   getPlaces()
+  // }, [])
+
   return (
-    <h1>Hello</h1>
+    <>
+      <h1>Hello</h1>
+      <Link to='/profile/getmyplaces'>
+        <GetMyPlaces { ...userData } />
+      </Link>
+    </>
   )
 }
 
