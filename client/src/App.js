@@ -7,7 +7,6 @@ import AllPackages from './components/AllPackages'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import ShowPage from './components/ShowPage'
-import UserProfile from './components/auth/UserProfile'
 
 const App = () => {
 
@@ -19,7 +18,6 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/map">
-          <MyNavbar className="nav-grey" />
           <MultipleMarkers />
         </Route>
         <Route path="/packages/:id">
@@ -27,9 +25,6 @@ const App = () => {
         </Route>
         <Route path="/packages">
           <AllPackages />
-        </Route>
-        <Route path="/profile">
-          <UserProfile />
         </Route>
         <Route path="/register">
           <MyNavbar className="nav-home" />
