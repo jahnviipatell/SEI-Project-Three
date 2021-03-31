@@ -6,16 +6,10 @@ import ShowPackageTile from './ShowPackageTile'
 import { useParams } from 'react-router-dom'
 
 
-<<<<<<< HEAD
-const ShowPage = ( ...props ) => {
-  console.log(AllPackages)
-  console.log('props', props)
-=======
 const ShowPage = () => {
   // console.log(AllPackages)
   // console.log('props', props)
   const { id } = useParams()
->>>>>>> f81b5a7113f42c5f54ef4753427e3db542584eb8
 
   const [viewPort, setViewPort] = useState({
     latitude: 64.842827,
@@ -32,11 +26,9 @@ const ShowPage = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/places')
-      console.log('data', data)
+      // console.log('data', data)
       const packageData = data.filter(item => {
-        return item.packages.filter(index => {
-          return index === id
-        })
+        return item.packages.includes(parseInt(id))
       })
       // console.log('packageData', packageData)
       setLocations(packageData)
@@ -69,7 +61,9 @@ const ShowPage = () => {
           })
           }
         </ReactMapGL>
-        <div className="map-controller"> 
+        <div className="map-controller" id="no-scroll1"  style={{ height: '55em', overflowY: 'scroll' }}> 
+          <h3>{locations[0].packageName}</h3>
+          <h5>Daily itinerary</h5>
           {locations.map(location => {
             return <ShowPackageTile 
               key={location._id}

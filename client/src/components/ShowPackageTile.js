@@ -12,9 +12,8 @@ const ShowPackageTile = ( props ) => {
     
     <Media> 
       <Media.Body>
-        <h4>{props.nameOfDestination}</h4>
-        {/* <h5>{props.description}</h5> */}
-        {/* <h6>{day}</h6> */}
+        <h6>{props.typeOfDestination} : {props.nameOfDestination}</h6>
+        <h6>Day: {props.day[0]}</h6>
         <p>   
           <img
             width={250}
