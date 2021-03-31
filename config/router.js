@@ -35,6 +35,9 @@ router.route('/login')
 
 router.route('/profile')
   .get(secureRoute, getUserProfile)
+
+router.route('/profile/getmyplaces')
+  .get(getAllPlaces)
   
 
 export default router

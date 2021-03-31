@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import axios from 'axios'
+import { userIsAuthenticated } from '../auth/helpers/auth'
 
 
 const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, description }) => {
@@ -44,9 +45,13 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
       <Tab eventKey="save" title="Save">
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
-            <Card.Text>Save to profile:
-              <button type="button" onClick={handleClick}>Save!</button>
-            </Card.Text>
+            { userIsAuthenticated() ?
+              <Card.Text>Save to profile:
+                <button type="button" onClick={handleClick}>Save!</button>
+              </Card.Text>
+              :
+              <Card.Text>Login to save to profile</Card.Text>
+            }
           </Card.Body>
         </Card>
       </Tab>
