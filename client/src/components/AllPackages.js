@@ -90,7 +90,7 @@ const AllPackages = () => {
             </Carousel.Item>
           </Carousel>
         </div>
-        <div className="scroll-filter">
+        <div className="scroll-filter" >
           <div className="button-bar">
             <div className="drop-downs">
               {/* <div className="bootstrap-button">
