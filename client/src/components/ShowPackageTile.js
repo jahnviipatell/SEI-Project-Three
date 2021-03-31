@@ -10,9 +10,12 @@ import Button from 'react-bootstrap/Button'
 
 const ShowPackageTile = () => {
 
-  const { id, duration } = useParams()
+  const { id } = useParams()
   const [locations, setLocations] = useState([])
   const [day, setDay] = useState([])
+  const [duration, setDuration] = useState(null)
+
+
 
   const handleClick = (event) => {
     console.log('CLICKED', event.target.value)
@@ -20,6 +23,8 @@ const ShowPackageTile = () => {
   }
   console.log('day', day)
   console.log('locations', locations)
+  console.log('ID', id)
+
 
   useEffect(() => {
     const getData = async () => {
@@ -28,6 +33,7 @@ const ShowPackageTile = () => {
       // const packageData = data.filter(item => {
       //   return item.packages.includes(parseInt(id))
       // })
+
       const dayOne = data.filter(item => {
         return (item.packages.includes(parseInt(id)) && item.day1 === true)
       })
@@ -90,8 +96,22 @@ const ShowPackageTile = () => {
     getData()
   }, [day])
 
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get('/api/packages')
+      const durationData = data[id - 1].duration
+      setDuration(durationData)
+    }
+    // console.log('packageData', packageData)
+
+    getData()
+  }, [duration])
+
+  console.log('duration', duration)
 
   if (!locations) return null
+  if (!duration) return null
+
 
   return (
     <>
@@ -119,7 +139,6 @@ const ShowPackageTile = () => {
         {duration >= 10 ?
           <Button className="day-button" variant="outline-secondary" value="dayTen" onClick={handleClick}>10</Button>
           : null}
-
       </div>
       <div className="days-container">
         <ul>
