@@ -22,8 +22,8 @@ const Login = () => {
     console.log('TOKEN>>>>')
     const response = await axios.post('api/login', formData)
     window.localStorage.setItem('token', response.data.token)
-    
-    history.push('/packages')
+
+    history.push('/profile')
     console.log(response)
   }
 

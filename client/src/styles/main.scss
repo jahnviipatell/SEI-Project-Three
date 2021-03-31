@@ -577,3 +577,13 @@ h6 {
   text-align: center;
   background: transparentize($color: grey, $amount: 0.8);
 }
+
+.hidden-lat {
+  color: white;
+  position: absolute;
+  width: 15vw;
+  height: 24vh;
+  z-index: 6;
+  text-align: center;
+  margin-top: 15vh;
+}

@@ -62,6 +62,7 @@ const GetMyPlaces = (props) => {
                   // id="carousel-image"
                   src={place.image}
                 />
+                <p className="hidden-lat">For Directions Use : Lat.{place.latitude}, Long.{place.longitude}</p>
               </li>
             })}
           </ul>
