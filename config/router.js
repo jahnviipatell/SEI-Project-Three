@@ -2,7 +2,7 @@ import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
 import { getAllPackages, getOnePackage } from '../controllers/packages.js'
 import { getAllPlaces, getOnePlace } from '../controllers/places.js'
-import { addSavedPackage, getUserProfile } from '../controllers/users.js'
+import { addSavedPlace, getUserProfile } from '../controllers/users.js'
 import { getAllDays } from '../controllers/days.js'
 import { secureRoute } from './secureRoute.js'
 
@@ -16,6 +16,7 @@ router.route('/places')
 
 router.route('/places/:id')
   .get(getOnePlace)
+  .patch(secureRoute, addSavedPlace)
 
 router.route('/packages')
   .get(getAllPackages)
@@ -34,6 +35,6 @@ router.route('/login')
 
 router.route('/profile')
   .get(secureRoute, getUserProfile)
-  .patch(secureRoute, addSavedPackage)
+  
 
 export default router
