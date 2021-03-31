@@ -30,7 +30,7 @@ const Login = () => {
       <section className="section" id="login-section">
         <div className="container">
           <div className="columns">
-            <form onSubmit={handleSubmit} className="box column is-half is-offset-one-quarter"
+            <form onSubmit={handleSubmit}
             >
               <div className="field">
                 <label className="label">Email</label>
@@ -59,7 +59,7 @@ const Login = () => {
               </div>
               <div className="field">
                 <Link to={`/${formData.username}`}>
-                  <button type="submit" className="button is-fullwidth is-warning">Log Me In!</button>
+                  <button type="submit" className="button register-button">Log Me In!</button>
                 </Link>
               </div>
             </form>

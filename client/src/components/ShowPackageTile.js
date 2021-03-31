@@ -6,7 +6,7 @@ import Media from 'react-bootstrap/Media'
 
 
 const ShowPackageTile = ( props ) => {
-
+  console.log('props',props)
 
   return (
     

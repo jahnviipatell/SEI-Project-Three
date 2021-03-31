@@ -115,20 +115,25 @@ ul {
   box-shadow: 0 0 10px 0 white;
   background: transparentize($color: grey, $amount: 0.8);
 }
-
+.homepage-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.5vw;
+  margin-top: 1vh;
+}
 .button {
-  height: 40px;
-  width: 45%;
-  font-size: 13px;
+  // height: 5vh;
+  height: fit-content;
+  width: 22vw;
+  font-size: 1.7vh;
   font-weight: 550;
   border: white;
   box-shadow: 0 0 1px 0 white;
   background: transparentize($color: white, $amount: 0.8);
   border-radius: 5px;
   padding: 8px;
-  margin: 10px;
+  // margin: 10px;
   transition: 0.2s ease-in-out;
-  justify-content: space-between;
 }
 
 .button:hover {
@@ -146,7 +151,8 @@ background: rgb(194, 182, 182);
 
 .caption {
   position: absolute;
-  width: 50vw;
+  // width: 50vw;
+  width: fit-content;
   text-align: left;
   margin-top: 25vh;
   z-index: 6;
@@ -173,6 +179,7 @@ background: rgb(194, 182, 182);
 .filter-button {
   z-index: 6;
   height: 20px;
+  // height: fit-content;
   width: 7vw;
   font-size: 13px;
   font-weight: 550;
@@ -380,6 +387,18 @@ background: rgb(194, 182, 182);
   color: white;
 }
 
+.register-button {
+  margin-top: 10px;
+}
+
+.input {
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.is-danger {
+  border: solid red 4px;
+}
 //! Login
 
 #login-section {

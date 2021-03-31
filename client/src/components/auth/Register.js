@@ -100,7 +100,7 @@ const Register = () => {
               </div>
               <div className="field">
                 <Link to={`/${formData.username}`}>
-                  <button type="submit" className="button is-fullwidth is-warning">Register Me!</button>
+                  <button type="submit" className="button register-button">Register Me!</button>
                 </Link>
               </div>
             </form>
