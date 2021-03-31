@@ -63,17 +63,13 @@ const ShowPage = () => {
           })
           }
         </ReactMapGL>
-        <div className="map-controller" id="no-scroll1" style={{ height: '55em', overflowY: 'scroll' }}>
+        <div className="map-controller" id="no-scroll1" style={{ height: '87vh', overflowY: 'scroll' }}>
           <h3 className="package-title-show">{locations[0].packageName}</h3>
           <h5 className="daily">Daily itinerary</h5>
-          {/* {locations.map(location => { */}
           <ShowPackageTile
             key={location._id}
             {...location} />
-          {/* })} */}
-
         </div>
-
       </div>
     </>
 
