@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import axios from 'axios'
 
 
 const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, description }) => {
 
   const [key, setKey] = useState('home')
 
-  const handleClick = async (event) => {
-    console.log(event.target.value)
+  const handleClick = async () => {
+    await axios.patch(`/api/places/${_id}`, )
   }
 
   return (
