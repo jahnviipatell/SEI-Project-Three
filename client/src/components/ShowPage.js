@@ -14,7 +14,7 @@ const ShowPage = () => {
   const [viewPort, setViewPort] = useState({
     latitude: 64.842827,
     longitude: -18.164241,
-    zoom: 5,
+    zoom: 6,
     bearing: 0,
     pitch: 0
   })
