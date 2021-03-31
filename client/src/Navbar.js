@@ -26,6 +26,7 @@ const MyNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/map">Map</Nav.Link>
+          <Nav.Link href="/packages">Packages</Nav.Link>
           {userIsAuthenticated() &&
             <>
               <Nav.Link href="/profile">Profile</Nav.Link>

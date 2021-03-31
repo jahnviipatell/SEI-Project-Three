@@ -29,6 +29,7 @@ const App = () => {
           <AllPackages />
         </Route>
         <Route path="/profile">
+          <MyNavbar className="nav-home" />
           <UserProfile />
         </Route>
         <Route path="/register">

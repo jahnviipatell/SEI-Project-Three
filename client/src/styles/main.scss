@@ -505,3 +505,74 @@ h6 {
 .card-text {
   font-size: small;
 }
+
+//! Profile
+.saved-overall-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.saved-carousel {
+  position: absolute;
+}
+
+.save-to-profile {
+  width: 30%;
+  margin-left: 2vw;
+}
+
+.saved-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+
+.saved-ul {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-left: 42vw;
+  width: 40vw;
+  z-index: 6;
+}
+
+.caption {
+  width: 40vw;
+  text-align: left;
+  margin-left: 10vw;
+  margin-top: 19vh;
+}
+
+.saved-li {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // margin-right: 0;
+}
+
+.saved-img {
+  width: 100%;
+  z-index: 5;
+}
+
+.saved-title {
+  z-index: 6;
+  margin-left: 0;
+  width: 9vw;
+  // height: 9vh;
+  font-size: smaller;
+  position: absolute;
+  color: white;
+  text-align: center;
+  background: transparentize($color: grey, $amount: 0.8);
+
+}
