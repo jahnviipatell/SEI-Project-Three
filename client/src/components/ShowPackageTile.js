@@ -1,8 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-// import Media from 'react-bootstrap/Media'
-// import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import ShowTile from './ShowTile'
 import Button from 'react-bootstrap/Button'
@@ -29,10 +27,6 @@ const ShowPackageTile = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/places')
-      // console.log('data', data)
-      // const packageData = data.filter(item => {
-      //   return item.packages.includes(parseInt(id))
-      // })
 
       const dayOne = data.filter(item => {
         return (item.packages.includes(parseInt(id)) && item.day1 === true)
