@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 const placeSchema = new mongoose.Schema({
-  nameOfDestination: { type: String, required: true, unique: true },
+  nameOfDestination: { type: String, required: true },
   typeOfDestination: { type: String, required: true },
   longitude: { type: Number, required: true },
   latitude: { type: Number, required: true },
@@ -11,7 +11,17 @@ const placeSchema = new mongoose.Schema({
   packageId: { type: Number },
   winterAccess: { type: Boolean, required: true },
   star: { type: String },
-  day: [{ type: Number, required: true }],
+  day1: { type: Boolean, required: true },
+  day2: { type: Boolean, required: true },
+  day3: { type: Boolean, required: true },
+  day4: { type: Boolean, required: true },
+  day5: { type: Boolean, required: true },
+  day6: { type: Boolean, required: true },
+  day7: { type: Boolean, required: true },
+  day8: { type: Boolean, required: true },
+  day9: { type: Boolean, required: true },
+  day10: { type: Boolean, required: true },
+  packageNumber: { type: Number, required: true },
   packages: [{ type: Number, required: true }],
   packageName: [{ type: String, required: true }]
 })

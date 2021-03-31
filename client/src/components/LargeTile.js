@@ -7,14 +7,6 @@ import { Link } from 'react-router-dom'
 const LargeTile = (props) => {
 
 
-  // const history = useHistory()
-
-  // const handleClick = (event) => {
-  //   console.log(event)
-  //   history.push('/packages/:id')
-  // }
-
-
   return (
     <>
       <Link to={`/packages/${props.packageNumber}`} style={{ textDecoration: 'none' }}>

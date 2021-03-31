@@ -38,7 +38,7 @@ const ShowPage = () => {
 
   // console.log(props.name)
 
-  if (locations.length < 1) return null 
+  if (locations.length < 1) return null
 
   // console.log('locations', locations)
 
@@ -54,25 +54,25 @@ const ShowPage = () => {
           height='100%'
           width='100%'
           mapStyle='mapbox://styles/mapbox/light-v10' >
-          {locations.map(location => { 
-            return <Marker key ={location._id} latitude={location.latitude} longitude={location.longitude}>
+          {locations.map(location => {
+            return <Marker key={location._id} latitude={location.latitude} longitude={location.longitude}>
               <p>{location.icon}</p>
             </Marker>
           })
           }
         </ReactMapGL>
-        <div className="map-controller" id="no-scroll1"  style={{ height: '55em', overflowY: 'scroll' }}> 
+        <div className="map-controller" id="no-scroll1" style={{ height: '55em', overflowY: 'scroll' }}>
           <h3>{locations[0].packageName}</h3>
           <h5>Daily itinerary</h5>
-          {locations.map(location => {
-            return <ShowPackageTile 
-              key={location._id}
-              { ...location}/>
-          })}
+          {/* {locations.map(location => { */}
+          return <ShowPackageTile
+            key={location._id}
+            {...location} />
+          {/* })} */}
 
-        </div> 
+        </div>
 
-      </div> 
+      </div>
     </>
 
 
