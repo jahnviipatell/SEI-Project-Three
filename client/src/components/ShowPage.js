@@ -65,7 +65,7 @@ const ShowPage = () => {
           <h3>{locations[0].packageName}</h3>
           <h5>Daily itinerary</h5>
           {/* {locations.map(location => { */}
-          return <ShowPackageTile
+          <ShowPackageTile
             key={location._id}
             {...location} />
           {/* })} */}
