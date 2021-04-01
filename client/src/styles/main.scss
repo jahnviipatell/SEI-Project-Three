@@ -140,6 +140,17 @@ ul {
 background: rgb(194, 182, 182);
 }
 
+.homepage-subtitle {
+  z-index: 5;
+  // position: absolute;
+  font-size: 2.3vh;
+  font-style: oblique;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 //! ALL PACKAGES
 .packages-shadow {
   height: 100vh;
