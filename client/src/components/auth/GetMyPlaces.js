@@ -53,26 +53,29 @@ const GetMyPlaces = (props) => {
           </Carousel>
         </div>
         <div className="saved-container">
+          <p className="saved-places-caption">My saved places:</p>
           <ul className="saved-ul">
             {allMyPlaces.map(place => {
-              return <li key={place._id} className="saved-li">
-                <h1 className="saved-title">{place.nameOfDestination}</h1>
-                <img
-                  className="saved-img"
-                  // id="carousel-image"
-                  src={place.image}
-                />
-                <p className="hidden-lat">For Directions Use :
-                  <br />
-                  Lat.{place.latitude}
-                  <br />
-                  Long.{place.longitude}</p>
-                {/* <p className="hidden-lat">{place.description}</p> */}
-              </li>
+              return (
+                <li key={place._id} className="saved-li">
+                  <h1 className="saved-title">{place.nameOfDestination}</h1>
+                  <img
+                    className="saved-img"
+                    // id="carousel-image"
+                    src={place.image}
+                  />
+                  <p className="hidden-lat">For Directions Use :
+                    <br />
+                    Lat.{place.latitude}
+                    <br />
+                    Long.{place.longitude}</p>
+                  {/* <p className="hidden-lat">{place.description}</p> */}
+                </li>
+              )
             })}
           </ul>
           <div className="caption">
-            <p className="welcome-caption">Welcome Back {props.username}!</p>
+            <p className="welcome-caption">Welcome Back, {props.username}!</p>
           </div>
         </div>
       </div>

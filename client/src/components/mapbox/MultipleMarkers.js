@@ -44,6 +44,7 @@ const MultipleMarkers = () => {
     <>
       {/* <Navbar className="nav-grey" /> */}
       <div className="map-container">
+        <p className="map-caption">Click on an icon to find out more.</p>
         <ReactMapGL
           {...viewPort}
           onViewportChange={(viewPort) => setViewPort(viewPort)}
