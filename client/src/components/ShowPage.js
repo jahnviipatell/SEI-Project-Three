@@ -20,8 +20,6 @@ const ShowPage = () => {
     pitch: 0
   })
 
-  
-
   const [locations, setLocations] = useState([])
 
   useEffect(() => {
