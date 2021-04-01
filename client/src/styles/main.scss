@@ -177,7 +177,7 @@ background: rgb(194, 182, 182);
 .p-caption {
   width: 50vw;
   margin-bottom: 0;
-  // margin-left: 6vw;
+  margin-left: -4vw;
 }
 
 .filters {
@@ -518,6 +518,9 @@ h6 {
 }
 
 //! Profile
+// #text-color-change {
+//   color: yellow;
+// }
 .saved-overall-container {
   display: flex;
   width: 100vw;

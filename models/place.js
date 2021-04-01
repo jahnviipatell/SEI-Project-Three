@@ -1,5 +1,11 @@
 import mongoose from 'mongoose'
 
+// * Schema for the ratings
+const ratingSchema = new mongoose.Schema({
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+})
+
 const placeSchema = new mongoose.Schema({
   nameOfDestination: { type: String, required: true },
   typeOfDestination: { type: String, required: true },
@@ -23,7 +29,23 @@ const placeSchema = new mongoose.Schema({
   day10: { type: Boolean, required: true },
   packageNumber: { type: Number, required: true },
   packages: [{ type: Number, required: true }],
-  packageName: [{ type: String, required: true }]
+  packageName: [{ type: String, required: true }],
+  ratings: [ratingSchema]
 })
+
+// * Calculate avg rating
+placeSchema
+  .virtual('avgRating')
+  .get(function() {
+    if (!this.ratings.length) return 'Not yet rated'
+    const sum = this.ratings.reduce((acc, curr) => {
+      return acc + curr.rating
+    }, 0)
+    return (sum / this.ratings.length).toFixed(2)
+  })
+
+// ! INCLUDE virtual fields when returning JSON response 
+placeSchema.set('toJSON', { virtuals: true })
+
 
 export default mongoose.model('Place', placeSchema)
