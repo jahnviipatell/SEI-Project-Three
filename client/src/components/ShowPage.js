@@ -4,6 +4,7 @@ import ReactMapGL, { Marker } from 'react-map-gl'
 import ShowPackageTile from './ShowPackageTile'
 // import AllPackages from './AllPackages.js'
 import { useParams } from 'react-router-dom'
+import Navbar from '../Navbar'
 
 
 const ShowPage = () => {
@@ -13,8 +14,8 @@ const ShowPage = () => {
 
   const [viewPort, setViewPort] = useState({
     latitude: 64.842827,
-    longitude: -18.164241,
-    zoom: 6,
+    longitude: -22.164241,
+    zoom: 5.75,
     bearing: 0,
     pitch: 0
   })
@@ -46,6 +47,7 @@ const ShowPage = () => {
 
   return (
     <>
+      <Navbar className="nav-grey" />
       <div className="map-container">
         <ReactMapGL
           {...viewPort}
@@ -61,17 +63,13 @@ const ShowPage = () => {
           })
           }
         </ReactMapGL>
-        <div className="map-controller" id="no-scroll1" style={{ height: '55em', overflowY: 'scroll' }}>
-          <h3>{locations[0].packageName}</h3>
-          <h5>Daily itinerary</h5>
-          {/* {locations.map(location => { */}
+        <div className="map-controller" id="no-scroll1" style={{ height: '87vh', overflowY: 'scroll' }}>
+          <h3 className="package-title-show">{locations[0].packageName}</h3>
+          <h5 className="daily">Daily itinerary</h5>
           <ShowPackageTile
             key={location._id}
             {...location} />
-          {/* })} */}
-
         </div>
-
       </div>
     </>
 

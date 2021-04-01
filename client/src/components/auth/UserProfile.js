@@ -5,10 +5,11 @@ import GetMyPlaces from './GetMyPlaces'
 
 const UserProfile = () => {
 
+
   const [userData, setUserData] = useState(null)
 
   useEffect(() => {
-    const getUser = async() => {
+    const getUser = async () => {
       const token = window.localStorage.getItem('token')
       const response = await axios.get('/api/profile', {
         headers: {
@@ -32,9 +33,8 @@ const UserProfile = () => {
 
   return (
     <>
-      <h1>Hello</h1>
       <Link to='/profile/getmyplaces'>
-        <GetMyPlaces { ...userData } />
+        <GetMyPlaces {...userData} />
       </Link>
     </>
   )

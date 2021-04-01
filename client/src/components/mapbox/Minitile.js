@@ -11,6 +11,7 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
   const [key, setKey] = useState('home')
 
   const handleClick = async () => {
+    setKey(null)
     const token = window.localStorage.getItem('token')
     await axios.patch(`/api/places/${_id}`, { _id }, {
       headers: {
@@ -45,9 +46,9 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
       <Tab eventKey="save" title="Save">
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
-            { userIsAuthenticated() ?
+            {userIsAuthenticated() ?
               <Card.Text>Save to profile:
-                <button type="button" onClick={handleClick}>Save!</button>
+                <button type="button" className="button save-to-profile" onClick={handleClick}>Save!</button>
               </Card.Text>
               :
               <Card.Text>Login to save to profile</Card.Text>

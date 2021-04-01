@@ -10,11 +10,11 @@ const ShowTile = (props) => {
 
   return (
     <>
-      <li>
+      <li className="show">
         <Media>
           <Media.Body>
-            <h4>{props.typeOfDestination} : {props.nameOfDestination}</h4>
-            <p>
+            <h4 className="type-title">{props.typeOfDestination} : {props.nameOfDestination}</h4>
+            <p className="show-p">
               <img
                 width={250}
                 height={150}

@@ -15,7 +15,7 @@ const MyNavbar = () => {
   }
   const location = useLocation()
   useEffect(() => {
-  // re-render Navbar when url changes
+    // re-render Navbar when url changes
   }, [location.pathname])
 
 
@@ -26,18 +26,20 @@ const MyNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/map">Map</Nav.Link>
-          { userIsAuthenticated() &&
-          <>
-            <Nav.Link href="/profile">Profile</Nav.Link>
-            <button type="button" onClick={handleLogout}>Log Out</button>
-          </>
+          <Nav.Link href="/packages">Packages</Nav.Link>
+          {userIsAuthenticated() &&
+            <>
+              <Nav.Link href="/profile">Profile</Nav.Link>
+              {/* <button type="button" onClick={handleLogout}>Log Out</button> */}
+              <Nav.Link onClick={handleLogout}>Log Out</Nav.Link>
+            </>
           }
-          { !userIsAuthenticated() &&
-          <>
-            <Nav.Link href="/register">Sign up</Nav.Link>
-            <Nav.Link href="/login">Log in</Nav.Link>
-          </>
-          }   
+          {!userIsAuthenticated() &&
+            <>
+              <Nav.Link href="/register">Sign up</Nav.Link>
+              <Nav.Link href="/login">Log in</Nav.Link>
+            </>
+          }
         </Nav>
       </Navbar.Collapse>
     </Navbar>

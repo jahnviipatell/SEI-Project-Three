@@ -19,6 +19,7 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/map">
+          <MyNavbar className="nav-home" />
           <MultipleMarkers />
         </Route>
         <Route path="/packages/:id">
@@ -28,6 +29,7 @@ const App = () => {
           <AllPackages />
         </Route>
         <Route path="/profile">
+          <MyNavbar className="nav-home" />
           <UserProfile />
         </Route>
         <Route path="/register">

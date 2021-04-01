@@ -110,7 +110,7 @@ const ShowPackageTile = () => {
   return (
     <>
       <div className="button-container">
-        <h6>Day</h6>
+        <h6>Day:</h6>
         <Button className="day-button" variant="outline-secondary" value="dayOne" onClick={handleClick}>1</Button>
         <Button className="day-button" variant="outline-secondary" value="dayTwo" onClick={handleClick}>2</Button>
         <Button className="day-button" variant="outline-secondary" value="dayThree" onClick={handleClick}>3</Button>
@@ -135,7 +135,7 @@ const ShowPackageTile = () => {
           : null}
       </div>
       <div className="days-container">
-        <ul>
+        <ul className="show-stuff">
           {locations.map(item => {
             return <ShowTile
               key={item._id}

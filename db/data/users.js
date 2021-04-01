@@ -1,24 +1,24 @@
 export default [
   {
-    username: 'paddy',
+    username: 'Paddy',
     email: 'paddy@email',
     password: 'pass',
     passwordConfirmation: 'pass'
   },
   {
-    username: 'hamza',
+    username: 'Hamza',
     email: 'hamza@email',
     password: 'pass',
     passwordConfirmation: 'pass'
   },
   {
-    username: 'jahnvi',
+    username: 'Jahnvi',
     email: 'jahnvi@email',
     password: 'pass',
     passwordConfirmation: 'pass'
   },
   {
-    username: 'karen',
+    username: 'Karen',
     email: 'karen@email',
     password: 'pass',
     passwordConfirmation: 'pass'

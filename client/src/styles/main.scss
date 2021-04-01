@@ -178,7 +178,7 @@ background: rgb(194, 182, 182);
 
 .filter-button {
   z-index: 6;
-  height: 20px;
+  height: 3.5vh;
   // height: fit-content;
   width: 7vw;
   font-size: 13px;
@@ -190,6 +190,7 @@ background: rgb(194, 182, 182);
   transition: 0.2s ease-in-out;
   justify-content: space-between;
   margin-right: 4px;
+  margin-bottom: 2vh;
 }
 
 .filter-button:hover {
@@ -389,6 +390,7 @@ background: rgb(194, 182, 182);
 
 .register-button {
   margin-top: 10px;
+  width: 100%;
 }
 
 .input {
@@ -433,20 +435,166 @@ div.card {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
+
 h6 {
   margin-bottom: 0;
+  font-size:small;
 }
 .day-button {
   background-color: black;
   background: transparentize($color: grey, $amount: 0.7);
   color: white;
-  width: 40px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  width: 35px;
+  font-size: small;
+  margin-right: 3px;
+  margin-left: 2px;
 }
 
-// .day-button:hover {
-// background: rgb(194, 182, 182);
-// }
+.day-button:hover {
+  transform: scale(1.5)
+}
+
+.daily {
+  font-style: oblique;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.package-title-show {
+  height: fit-content;
+  // background: transparentize($color: grey, $amount: 0.3);
+  box-shadow: 0 0 2px 0 white;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.show-stuff {
+  padding-left: 0;
+}
+
+.show {
+  margin-bottom: 10px;
+  border-bottom: solid rgb(211, 209, 209) 2px;
+  border-top: solid rgb(211, 209, 209) 2px;
+}
+
+.type-title {
+  margin-top: 10px;
+}
+
+.show-p {
+  font-size: smaller;
+}
+
+.map-container {
+  position: absolute;
+  margin-top: -9vh;
+  height: 100vh;
+}
+
+.map-controller {
+  margin-top: 10vh;
+  width: 35vw;
+}
+
+//! Main map
+.card-text {
+  font-size: small;
+}
+
+//! Profile
+.saved-overall-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.saved-carousel {
+  position: absolute;
+}
+
+.save-to-profile {
+  width: 30%;
+  margin-left: 2vw;
+}
+
+.saved-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+
+.saved-ul {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-left: 42vw;
+  width: 45vw;
+  z-index: 6;
+}
+
+.caption {
+  width: 35vw;
+  text-align: center;
+  margin-left: 5vw;
+}
+
+.saved-li {
+  width: 15vw;
+  height: 24vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5vh;
+  box-shadow: 0 0 5px 0 white;
+}
+
+.saved-img {
+  // position: absolute;
+  z-index: 5;
+  height: 100%;
+}
+
+.saved-title {
+  z-index: 6;
+  margin-left: 0;
+  width: 9vw;
+  // height: 9vh;
+  font-size: 2.5vh;
+  position: absolute;
+  color: white;
+  text-align: center;
+  background: transparentize($color: grey, $amount: 0.8);
+}
+
+.hidden-lat:hover {
+  color: white;
+  position: absolute;
+  width: 15vw;
+  height: 24vh;
+  z-index: 6;
+  text-align: center;
+  background: grey;
+  margin: 0.5vh;
+  transition: all 0.22s ease-in-out;
+  // font-size: xx-small;
+}
+
+.hidden-lat {
+  color: transparent;
+  background: transparent;
+  position: absolute;
+  z-index: 6;
+}
