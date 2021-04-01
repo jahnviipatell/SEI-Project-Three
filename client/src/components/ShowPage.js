@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ReactMapGL, { Marker } from 'react-map-gl'
+import ReactMapGL, { FlyToInterpolator, Marker } from 'react-map-gl'
 import ShowPackageTile from './ShowPackageTile'
 // import AllPackages from './AllPackages.js'
 import { useParams } from 'react-router-dom'
@@ -19,8 +19,6 @@ const ShowPage = () => {
     bearing: 0,
     pitch: 0
   })
-
-
 
   const [locations, setLocations] = useState([])
 
@@ -41,9 +39,18 @@ const ShowPage = () => {
 
   if (locations.length < 1) return null
 
+  const handleFlyClick = (event) => {
+    setViewPort({
+      ...viewPort,
+      longitude: Number(event.target.dataset.longitude),
+      latitude: Number(event.target.dataset.latitude),
+      zoom: 8,
+      transitionDuration: 5000,
+      transitionInterpolator: new FlyToInterpolator()
+      // transitionEasing: d3.easeCubic
+    })
+  }
   // console.log('locations', locations)
-
-
 
   return (
     <>
@@ -58,13 +65,13 @@ const ShowPage = () => {
           mapStyle='mapbox://styles/mapbox/light-v10' >
           {locations.map(location => {
             return <Marker key={location._id} latitude={location.latitude} longitude={location.longitude}>
-              <p>{location.icon}</p>
+              <p onClick={handleFlyClick} data-latitude={location.latitude} data-longitude={location.longitude}>{location.icon}</p>
             </Marker>
           })
           }
         </ReactMapGL>
         <div className="map-controller" id="no-scroll1" style={{ height: '87vh', overflowY: 'scroll' }}>
-          <h3 className="package-title-show">{locations[0].packageName}</h3>
+          <h3 className="package-title-show" >{locations[0].packageName}</h3>
           <h5 className="daily">Daily itinerary</h5>
           <ShowPackageTile
             key={location._id}

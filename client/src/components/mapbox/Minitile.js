@@ -10,9 +10,12 @@ import StarRating from '../Ratings'
 const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, description, avgRating }) => {
 
   const [key, setKey] = useState('home')
+  const [saved, setSaved] = useState('Save!')
+  const [button, setButton] = useState(true)
 
   const handleClick = async () => {
-    setKey(null)
+    setSaved('Saved! View your profile to see your saved places.')
+    setButton(false)
     const token = window.localStorage.getItem('token')
     await axios.patch(`/api/places/${_id}`, { _id }, {
       headers: {
@@ -49,9 +52,16 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
             {userIsAuthenticated() ?
-              <Card.Text>Save to profile:
-                <button type="button" className="button save-to-profile" onClick={handleClick}>Save!</button>
-                <StarRating _id={_id} />
+              <Card.Text>
+                {button ?
+                  <Card.Text>Save to profile:
+                    <button type="button" className="button save-to-profile" onClick={handleClick}>{saved}</button>
+                    <StarRating _id={_id} />
+                  </Card.Text>
+                  :
+                  <p>{saved}</p>
+
+                }
               </Card.Text>
               :
               <>

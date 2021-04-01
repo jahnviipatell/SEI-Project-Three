@@ -21,6 +21,7 @@ const Home = () => {
       <div className="homepage">
         <div className="homepage-container">
           <img className="logo-homepage" src='/assets/logo_white_large.jpeg' />
+          <p className="homepage-subtitle">Get behind the wheel and explore.</p>
           <div className="homepage-buttons">
             <Button className="button" onClick={handleClick}>EXPLORE ALL PACKAGES</Button>{' '}
             <Button className="button" onClick={handleClickMap}>CREATE CUSTOM TRIP</Button>{' '}
