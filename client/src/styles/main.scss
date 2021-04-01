@@ -600,11 +600,23 @@ h6 {
 }
 
 .saved-places-caption {
-  font-size: 4vh;
-  padding-top: 3vh;
+  font-size: 3vh;
+  padding-top: 4.5vh;
   position: absolute;
   z-index: 6;
   color: white;
   margin-left: 45vw;
   font-style: oblique;
+}
+
+.map-caption {
+  position: absolute;
+  color: white;
+  text-align: center;
+  z-index: 5;
+  font-size: 4vh;
+  font-style: oblique;
+  width: 15vw;
+  margin-top: 74vh;
+  margin-left: 2vw;
 }
