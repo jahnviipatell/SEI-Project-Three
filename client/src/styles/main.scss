@@ -166,7 +166,7 @@ background: rgb(194, 182, 182);
 .p-caption {
   width: 50vw;
   margin-bottom: 0;
-  margin-left: 6vw;
+  // margin-left: 6vw;
 }
 
 .filters {
@@ -539,7 +539,7 @@ h6 {
   flex-wrap: wrap;
   align-self: center;
   margin-left: 42vw;
-  width: 45vw;
+  width: 38vw;
   z-index: 6;
 }
 
@@ -550,7 +550,7 @@ h6 {
 }
 
 .saved-li {
-  width: 15vw;
+  width: 13vw;
   height: 24vh;
   overflow: hidden;
   display: flex;
@@ -582,14 +582,14 @@ h6 {
 .hidden-lat:hover {
   color: white;
   position: absolute;
-  width: 15vw;
+  width: 13vw;
   height: 24vh;
   z-index: 6;
   text-align: center;
   background: grey;
   margin: 0.5vh;
   transition: all 0.22s ease-in-out;
-  // font-size: xx-small;
+  font-size: small;
 }
 
 .hidden-lat {
@@ -597,4 +597,14 @@ h6 {
   background: transparent;
   position: absolute;
   z-index: 6;
+}
+
+.saved-places-caption {
+  font-size: 4vh;
+  padding-top: 3vh;
+  position: absolute;
+  z-index: 6;
+  color: white;
+  margin-left: 45vw;
+  font-style: oblique;
 }
