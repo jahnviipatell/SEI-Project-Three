@@ -29,7 +29,7 @@ const App = () => {
           <AllPackages />
         </Route>
         <Route path="/profile">
-          <MyNavbar className="nav-home" />
+          <MyNavbar className="nav-home" id="text-color-change" />
           <UserProfile />
         </Route>
         <Route path="/register">

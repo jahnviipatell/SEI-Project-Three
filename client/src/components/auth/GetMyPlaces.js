@@ -64,11 +64,7 @@ const GetMyPlaces = (props) => {
                     // id="carousel-image"
                     src={place.image}
                   />
-                  <p className="hidden-lat">For Directions Use :
-                    <br />
-                    Lat.{place.latitude}
-                    <br />
-                    Long.{place.longitude}</p>
+                  <p className="hidden-lat">Average Rating: {place.avgRating}</p>
                   {/* <p className="hidden-lat">{place.description}</p> */}
                 </li>
               )
