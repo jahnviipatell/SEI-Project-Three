@@ -75,17 +75,17 @@ export default [
     reviewRating: 4.7,
     season: 'Summer',
     packageNumber: 7
-  }
+  },
 
-  // {
-  //   name: 'Reykjavik & The Blue Lagoon',
-  //   price: 263,
-  //   description: 'On your trip, you\'ll visit some incredible places, including the Blue Lagoon, Golden Circle, Reynisfjara black sand beach, Jökulsárlón glacier lagoon and many of Iceland\'s most famous waterfalls.',
-  //   duration: 5,
-  //   image: '/assets/adam-jang-zzOPJR7tlK0-unsplash.jpg',
-  //   reviewRating: 4.7,
-  //   season: 'Summer',
-  //   packageNumber: 8
-  // }
+  {
+    name: 'Northern Lights & Golden Circle',
+    price: 184,
+    description: 'Discover the very best of Iceland’s snowy landscapes with this 5-day winter self drive tour. Relax in the Blue Lagoon, see the Golden Circle and drive the South Coast all the way to Jökulsárlón Glacier Lagoon where you can visit an authentic ice cave',
+    duration: 5,
+    image: '/assets/adam-jang-zzOPJR7tlK0-unsplash.jpg',
+    reviewRating: 4.8,
+    season: 'Winter',
+    packageNumber: 8
+  }
 
 ]
