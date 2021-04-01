@@ -25,3 +25,19 @@ export const getOnePlace = async (req, res) => {
     return res.status(404).json({ message: 'Not Found' })
   }
 }
+
+// * Add comment to a show
+export const addRatingToPlace = async (req, res) => {
+  try {
+    const { id } = req.params 
+    const place = await Place.findById(id)
+    if (!place) throw new Error('Cannot find place')
+    const newRating = { ...req.body, owner: req.currentUser._id }
+    place.ratings.push(newRating)
+    await place.save()
+    return res.status(200).json(place)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: err.message })
+  }
+}
