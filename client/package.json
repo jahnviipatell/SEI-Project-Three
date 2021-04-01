@@ -14,7 +14,8 @@
     "react-map-gl": "^6.1.10",
     "react-mapbox-gl": "^5.1.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "react-star-rating": "^1.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

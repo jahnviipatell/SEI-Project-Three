@@ -44,7 +44,8 @@ placeSchema
     return (sum / this.ratings.length).toFixed(2)
   })
 
-
+// ! INCLUDE virtual fields when returning JSON response 
 placeSchema.set('toJSON', { virtuals: true })
+
 
 export default mongoose.model('Place', placeSchema)

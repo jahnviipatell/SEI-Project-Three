@@ -4,9 +4,10 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import axios from 'axios'
 import { userIsAuthenticated } from '../auth/helpers/auth'
+import StarRating from '../Ratings'
 
 
-const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, description }) => {
+const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, description, avgRating }) => {
 
   const [key, setKey] = useState('home')
 
@@ -20,7 +21,7 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
     })
     console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
   }
-
+  console.log(_id)
   return (
     <Tabs
       id="controlled-tab-example"
@@ -40,6 +41,7 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
         <Card style={{ width: '18rem' }} key={_id}>
           <Card.Body>
             <Card.Text>{description}</Card.Text>
+            <Card.Text>Average rating: {avgRating}</Card.Text>
           </Card.Body>
         </Card>
       </Tab>
@@ -49,9 +51,13 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
             {userIsAuthenticated() ?
               <Card.Text>Save to profile:
                 <button type="button" className="button save-to-profile" onClick={handleClick}>Save!</button>
+                <StarRating _id={_id} />
               </Card.Text>
               :
-              <Card.Text>Login to save to profile</Card.Text>
+              <>
+                <Card.Text>Login to save to profile</Card.Text>
+                
+              </>
             }
           </Card.Body>
         </Card>

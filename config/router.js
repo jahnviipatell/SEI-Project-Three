@@ -18,8 +18,9 @@ router.route('/places/:id')
   .get(getOnePlace)
   .patch(secureRoute, addSavedPlace)
 
-router.route('/places/:id/rating')
+router.route('/places/:id/ratings')
   .post(secureRoute, addRatingToPlace)
+
 
 router.route('/packages')
   .get(getAllPackages)
