@@ -1,3 +1,6 @@
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
+
 const express = require('express')
 const mongoose = require('mongoose')
 const logger = require('./lib/logger')
