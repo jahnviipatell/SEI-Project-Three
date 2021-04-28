@@ -3,8 +3,9 @@ const require = createRequire(import.meta.url)
 
 const express = require('express')
 const mongoose = require('mongoose')
+const app = express()
 const logger = require('./lib/logger')
-const router = require('./config/router')
+const router = require('./config/routes')
 const errorHandler = require('./lib/errorHandler')
 const { port, dbURI } = require('./config/environment')
 // import express from 'express'
@@ -13,7 +14,6 @@ const { port, dbURI } = require('./config/environment')
 // import router from './config/router.js'
 // import logger from './lib/logger'
 // import errorHandler from './lib/errorHandler'
-const app = express()
 
 // const startServer = async () => {
 //   try {
